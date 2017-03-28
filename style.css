@@ -1,8 +1,11 @@
 .jumbotron {
     padding: 60px 25px;
 
+    background-color: rgb(7,87,110);
+    margin:0px;
+    color : #fafafa;
 
-    background-image: url("img/candidats.jpeg");
+
 
 
 }
