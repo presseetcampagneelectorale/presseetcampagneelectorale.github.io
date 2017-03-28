@@ -1,0 +1,60 @@
+.jumbotron {
+    padding: 60px 25px;
+    color : #fafafa;
+    background-color: rgb(7,87,110);
+    margin:0px;
+}
+
+.img-nav{
+background-image: url("img/presse.jpg");
+padding: 100px 25px;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+    }
+
+    .container-fluid {
+    padding: 60px 50px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #0275d8;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #0275d8 !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}.footer {
+  background: #061D25;
+  padding: 10px 0;
+}
+.footer a {
+  color: #70726F;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+.footer a:hover {
+  color: white;
+}
