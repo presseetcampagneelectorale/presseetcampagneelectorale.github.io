@@ -46,7 +46,8 @@ padding: 100px 25px;
 .navbar-default .navbar-toggle {
     border-color: transparent;
     color: #fff !important;
-}.footer {
+}
+#footer {
   background: #061D25;
   padding: 10px 0;
 }
