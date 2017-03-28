@@ -35,7 +35,7 @@ padding: 100px 25px;
     animation: mymove 8s infinite;
 }
 @keyframes mymove {
-    from {background-color: #0275d8;}
+    from {background-color: #283e4a;}
     to {background-color: #191970;}
 }
 
