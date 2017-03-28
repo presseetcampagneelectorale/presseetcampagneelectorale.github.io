@@ -32,12 +32,8 @@ padding: 100px 25px;
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
-    animation: mymove 8s infinite;
 }
-@keyframes mymove {
-    from {background-color: #283e4a;}
-    to {background-color: #191970;}
-}
+
 
 .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
