@@ -49,8 +49,10 @@ padding: 100px 25px;
     color: #fff !important;
 }
 #footer {
-  background: #F0FFF0;
   padding: 10px 0;
+  background-color: #283e4a ;
+
+  color : #fafafa;
 }
 
 .footer a:hover {
