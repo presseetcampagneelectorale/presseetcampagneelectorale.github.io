@@ -49,7 +49,7 @@ padding: 100px 25px;
     color: #fff !important;
 }
 #footer {
-  padding: 10px 0;
+  padding: 10px;
   background: #283e4a ;
 
   color : #fafafa;
@@ -58,3 +58,14 @@ padding: 100px 25px;
 .footer a:hover {
   color: green;
 }
+
+
+.fleche .glyphicon {
+font-size: 20px;
+color: #283e4a;
+padding: 2px
+margin-left: auto;
+margin-right: auto;
+}
+
+
