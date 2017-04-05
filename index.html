@@ -89,7 +89,6 @@
 
 </div>
 
-
 <div id="gr3" class="container-fluid">
   <h2>Graphe 3</h2>
   <h4>Lorem ipsum..</h4>
@@ -99,7 +98,7 @@
   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <div id='highcharts-ulysacu'><script src='//cloud.highcharts.com/inject/ulysacu/1' defer='defer'></script></div>
+  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 </div>
 
 <div id="gr4" class="container-fluid bg-grey">
@@ -192,5 +191,101 @@
 
 
 <script src="script.js" type="text/javascript" ></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+//Graphique numéro 3
+<script>Highcharts.chart('container', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: 'Traitement médiatique du Figaro'
+    },
+    subtitle: {
+        text: "Proportion d'articles sortis par semaine"
+    },
+    xAxis: {
+        title:{
+          text: "Semaine de 2017"
+        },
+        categories: ['1', '2', '3', '4', '5', '6',
+            '7', '8', '9', '10', '11', '12']
+    },
+    yAxis: {
+        title: {
+            text: "Volume d'articles"
+        }
+    },
+    tooltip: {
+        pointFormat : "{series.name}: <b>{point.y}</b><br/>",
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 4,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+    series: [{
+        name: 'Fillon',
+        marker: {
+            symbol: 'square'
+        },
+        
+        data: [2,2,{
+            y: 3, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)',
+                label: "gsgse"}
+                },6,17,13,14,6,30,28,26,5],
+                color : "#4169E1"
+
+    }, 
+    
+    {
+        name: 'Hamon',
+        marker: {
+            symbol: 'circle'
+        },
+        data: [3,5,5,20,24,14,14,22,13,27,28,16],
+        color : "#008000"
+    },
+   
+    {
+        visible : false,
+        name: 'Le Pen',
+        marker: {
+            symbol: 'triangle'
+        },
+        data: [4,0,9,4,14,16,12,31,26,24,12,18],
+        color : "#00008B"
+    },
+    
+    {
+        visible : false,
+        name: 'Macron',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [ 3,3,5,1,10,8,22,35,29,13,24,12],
+        color : "#FFA500",
+    },
+    
+    {
+        visible : false,
+        name: 'Mélenchon',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [7,6,3,8,14,17,7,24,5,9,24,4],
+        color:"#FF0000"
+    }
+    ]
+});
+ </script>
 </body>
 </html>
