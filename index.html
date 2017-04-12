@@ -203,67 +203,68 @@
   <h4>La presse est-elle en campagne?</h4>
 
   <select id="candidat1">
-  <option value="select">Choississez un candidat</option>
-  <option value="Fillon">Fillon</option>
-  <option  value="Mélenchon">Mélenchon </option>
-  <option value="LePen">LePen</option>
-  <option value="Hamon">Hamon</option>
-  <option value="Macron">Macron</option>
-</select>
-<strong> Versus</strong>
-<select id="candidat2" class=form-control>
-  <option value="select">Choississez un candidat</option>
-  <option value="Fillon">Fillon</option>
-  <option value="Mélenchon">Mélenchon</option>
-  <option value="LePen">LePen</option>
-  <option value="Hamon">Hamon</option>
-  <option value="Macron">Macron</option>
-</select>
+    <option value="select">Choississez un candidat</option>
+    <option value="Fillon">Fillon</option>
+    <option  value="Mélenchon">Mélenchon </option>
+    <option value="LePen">LePen</option>
+    <option value="Hamon">Hamon</option>
+    <option value="Macron">Macron</option>
+  </select>
+  <strong> Versus</strong>
+  <select id="candidat2" class=form-control>
+    <option value="select">Choississez un candidat</option>
+    <option value="Fillon">Fillon</option>
+    <option value="Mélenchon">Mélenchon</option>
+    <option value="LePen">LePen</option>
+    <option value="Hamon">Hamon</option>
+    <option value="Macron">Macron</option>
+  </select>
 
-<!--Candidat1=LEPEN-->
-<div class="result" data-candidat1="LePen" data-candidat2="Fillon"> LePen VS Fillon</div>
-<div class="result" data-candidat1="LePen" data-candidat2="Mélenchon"> LePen VS Mélenchon</div>
-<div class="result" data-candidat1="LePen" data-candidat2="Hamon"> LePen VS Hamon</div>
-<div class="result" data-candidat1="LePen" data-candidat2="Macron"> LePen VS Macron</div>
-<!--Candidat1=Macron-->
-<div class="result" data-candidat1="Macron" data-candidat2="Fillon"> Macron VS Fillon</div>
-<div class="result" data-candidat1="Macron" data-candidat2="Mélenchon"> Macron VS Mélenchon</div>
-<div class="result" data-candidat1="Macron" data-candidat2="Hamon"> Macron VS Hamon</div>
-<div class="result" data-candidat1="Macron" data-candidat2="LePen"> Macron VS LePen</div>
-<!--Candidat1=Hamon-->
-<div class="result" data-candidat1="Hamon" data-candidat2="Fillon"> Hamon VS Fillon</div>
-<div class="result" data-candidat1="Hamon" data-candidat2="Mélenchon"> Hamon VS Mélenchon</div>
-<div class="result" data-candidat1="Hamon" data-candidat2="Macron"> Hamon VS Macron</div>
-<div class="result" data-candidat1="Hamon" data-candidat2="LePen">Hamon VS LePen</div>
-<!--Candidat1=Mélenchon-->
-<div class="result" data-candidat1="Mélenchon" data-candidat2="Fillon"> Mélenchon VS Fillon</div>
-<div class="result" data-candidat1="Mélenchon" data-candidat2="Hamon"> Mélenchon VS Hamon</div>
-<div class="result" data-candidat1="Mélenchon" data-candidat2="Macron"> Mélenchon VS Macron</div>
-<div class="result" data-candidat1="Mélenchon" data-candidat2="LePen">Mélenchon VS LePen</div>
-<!--Candidat1=Fillon-->
-<div class="result" data-candidat1="Fillon" data-candidat2="Hamon"> Fillon VS Hamon</div>
-<div class="result" data-candidat1="Fillon" data-candidat2="Mélenchon"> Fillon VS Mélenchon</div>
-<div class="result" data-candidat1="Fillon" data-candidat2="Macron"> Fillon VS Mélenchon</div>
-<div class="result" data-candidat1="Fillon" data-candidat2="LePen">Fillon VS LePen</div>
-<script>
-  $('#candidat1, #candidat2').on('change', function() {
-    // set reference to select elements
-    var candidat1 = $('#candidat1');
-    var candidat2 = $('#candidat2');
-    if (candidat1.val() == 'select' || candidat2.val() == 'select') {
-      $('.result.active').removeClass('active');
-    }
-    // check if user has made a selection on both dropdowns
-    if (candidat1.prop('selectedIndex') > 0 && candidat2.prop('selectedIndex') > 0) {
-      // remove active class from current active div element
-      $('.result.active').removeClass('active');
+  <!--Candidat1=LEPEN-->
+  <div class="result" data-candidat1="LePen" data-candidat2="Fillon"> LePen VS Fillon</div>
+  <div class="result" data-candidat1="LePen" data-candidat2="Mélenchon"> LePen VS Mélenchon</div>
+  <div class="result" data-candidat1="LePen" data-candidat2="Hamon"> LePen VS Hamon</div>
+  <div class="result" data-candidat1="LePen" data-candidat2="Macron"> LePen VS Macron</div>
+  <!--Candidat1=Macron-->
+  <div class="result" data-candidat1="Macron" data-candidat2="Fillon"> Macron VS Fillon</div>
+  <div class="result" data-candidat1="Macron" data-candidat2="Mélenchon"> Macron VS Mélenchon</div>
+  <div class="result" data-candidat1="Macron" data-candidat2="Hamon"> Macron VS Hamon</div>
+  <div class="result" data-candidat1="Macron" data-candidat2="LePen"> Macron VS LePen</div>
+  <!--Candidat1=Hamon-->
+  <div class="result" data-candidat1="Hamon" data-candidat2="Fillon"> Hamon VS Fillon</div>
+  <div class="result" data-candidat1="Hamon" data-candidat2="Mélenchon"> Hamon VS Mélenchon</div>
+  <div class="result" data-candidat1="Hamon" data-candidat2="Macron"> Hamon VS Macron</div>
+  <div class="result" data-candidat1="Hamon" data-candidat2="LePen">Hamon VS LePen</div>
+  <!--Candidat1=Mélenchon-->
+  <div class="result" data-candidat1="Mélenchon" data-candidat2="Fillon"> Mélenchon VS Fillon</div>
+  <div class="result" data-candidat1="Mélenchon" data-candidat2="Hamon"> Mélenchon VS Hamon</div>
+  <div class="result" data-candidat1="Mélenchon" data-candidat2="Macron"> Mélenchon VS Macron</div>
+  <div class="result" data-candidat1="Mélenchon" data-candidat2="LePen">Mélenchon VS LePen</div>
+  <!--Candidat1=Fillon-->
+  <div class="result" data-candidat1="Fillon" data-candidat2="Hamon"> Fillon VS Hamon</div>
+  <div class="result" data-candidat1="Fillon" data-candidat2="Mélenchon"> Fillon VS Mélenchon</div>
+  <div class="result" data-candidat1="Fillon" data-candidat2="Macron"> Fillon VS Mélenchon</div>
+  <div class="result" data-candidat1="Fillon" data-candidat2="LePen">Fillon VS LePen</div>
+  <script>
+    $('#candidat1, #candidat2').on('change', function() {
+      // set reference to select elements
+      var candidat1 = $('#candidat1');
+      var candidat2 = $('#candidat2');
+      if (candidat1.val() == 'select' || candidat2.val() == 'select') {
+        $('.result.active').removeClass('active');
+      }
+      // check if user has made a selection on both dropdowns
+      if (candidat1.prop('selectedIndex') > 0 && candidat2.prop('selectedIndex') > 0) {
+        // remove active class from current active div element
+        $('.result.active').removeClass('active');
 
-      // get all result divs, and filter for matching data attributes
-      $('.result').filter('[data-candidat1="' + candidat1.val() + '"][data-candidat2="' + candidat2.val() + '"]').addClass('active');
-    }
-  });
+        // get all result divs, and filter for matching data attributes
+        $('.result').filter('[data-candidat1="' + candidat1.val() + '"][data-candidat2="' + candidat2.val() + '"]').addClass('active');
+      }
+    });
 
-</script>
+  </script>
+
 
 </div>
 
