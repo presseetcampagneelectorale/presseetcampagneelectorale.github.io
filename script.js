@@ -24,6 +24,18 @@ $(document).ready(function(){
   });
 })
 
+//Hover text sous les images
+
+$('.intro-img img').hover( function() { 
+    $('.hover-text').eq($('.intro-img img').index($(this))).show();
+ } , function() { 
+    $('.hover-text').eq($('.intro-img img').index($(this))).hide();
+ });
+
+
+
+
+
 //Graphique numéro 3
 Highcharts.chart('container', {
     chart: {
