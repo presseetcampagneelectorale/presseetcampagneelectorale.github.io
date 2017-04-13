@@ -55,6 +55,7 @@ background-image: url("img/presse.jpg");
 padding: 100px 25px;
 }
 
+
 .bg-grey {
     background-color: #f6f6f6;
     }
@@ -88,6 +89,19 @@ padding: 100px 25px;
     border-color: transparent;
     color: #fff !important;
 }
+
+/*Premier graphique*/
+#container0, .text1{
+  float: left;
+  width: 50%;
+}
+.text1{
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/***********************************************/
+
 #footer {
   padding: 10px;
   background: #283e4a ;

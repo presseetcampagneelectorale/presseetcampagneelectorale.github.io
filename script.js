@@ -32,7 +32,52 @@ $('.intro-img img').hover( function() {
     $('.hover-text').eq($('.intro-img img').index($(this))).hide();
  });
 
+//Graphique numéro 1 : volume d'articles global
 
+Highcharts.chart('container0', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: "Volume d'articles pour les 5 favoris"
+    },
+
+    xAxis: {
+        categories: ['Fillon', "Macron,",'Hamon', 'Le Pen', 'Mélenchon'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: "Nombre d'articles publiés",
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' articles'
+    },
+    plotOptions: {
+        series: {
+                        colorByPoint: true
+                    }
+        
+    },
+    
+    colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE'],
+    
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: "Couverture médiatique depuis début 2017",
+        data: [2622,1730,1510,1150,674]
+    }]
+});
 
 
 
