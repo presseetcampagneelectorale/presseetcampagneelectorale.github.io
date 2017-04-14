@@ -33,6 +33,12 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+
+
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
@@ -71,18 +77,16 @@
 </div>
 
 <div class = "intro">
-<h2>Présentation des journaux</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat.</p></div>
+<h2>Présentation des journaux passés en revue</h2>
+  <p>Nous avons 6 journaux représentatifs à notre sens de l'échiquier politique pour analyser le traitement médiatique de la campagne électorale depuis le début de l'année 2017.
+  </p></div>
 
 <div class = "intro-img">
 
 <img id="monde" src="img/monde.jpeg" class='image'>
 <img id = "figaro" src="img/figaro.png" class='image'>
 <img src="img/liberation.jpeg" class='image'>
-<img src="img/express.jpeg" class='image'> 
+<img src="img/express.jpeg" class='image'>
 <img src="img/jdd.jpeg" class='image'>
 <img src="img/obs.jpeg" class='image'>
 </div>
@@ -92,7 +96,7 @@
 
 <p class = "hover-text">Fondé en 1944, Le Monde est un des derniers grands quotidiens dits « du soir ». Journal de référence traitant essentiellement l’actualité politique, internationale et économique, il revendique une ligne éditoriale non partisane, bien que celle-ci est parfois considérée comme étant de centre gauche (mais démentie par la rédaction). Son lectorat est par ailleurs considéré comme étant majoritaire à gauche. En France, Le Monde possède un tirage annuel d’environ 82 millions de journaux en 2016. <br> Propriétaires : Pierre Bergé, Xavier Niel et Matthieu Pigasse</p>
 
-<p class = "hover-text">Le Figaro : Fondé en 1826, Le Figaro est un quotidien généraliste dont la ligne éditoriale est considérée appartenant au courant politique de la droite gaulliste et conservatrice. Son lectorat se situe majoritairement à la droite de l’échiquier politique Français. Son tirage annuel est d’environ 94 millions de journaux en 2016. <br>Propriétaire : Groupe Dassault 
+<p class = "hover-text">Le Figaro : Fondé en 1826, Le Figaro est un quotidien généraliste dont la ligne éditoriale est considérée appartenant au courant politique de la droite gaulliste et conservatrice. Son lectorat se situe majoritairement à la droite de l’échiquier politique Français. Son tirage annuel est d’environ 94 millions de journaux en 2016. <br>Propriétaire : Groupe Dassault
 </p>
 <p class = "hover-text">Fondé en 1973, Libération est un quotidien généraliste matinal dont la ligne éditoriale est aujourd’hui considérée comme étant sociale-démocrate (même si elle fut d’extrême-gauche à sa création). Son lectorat se situe majoritairement à gauche, et son tirage annuel est d’environ 29 millions de journaux en 2016. <br>Actionnaires principaux : Bruno Ledoux et Patrick Drahi
 
@@ -234,8 +238,8 @@
   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <div id='highcharts-emibiba'><script src='//cloud.highcharts.com/inject/emibiba' defer='defer'></script></div>
-
+  <!--<div id='highcharts-emibiba'><script src='//cloud.highcharts.com/inject/emibiba' defer='defer'></script></div>-->
+  <div id="repartition" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto"></div>
 </div>
 
 <div class="fleche"> <a href="#myPage" title="To Top">
@@ -336,11 +340,11 @@
         series: {
                         colorByPoint: true
                     }
-        
+
     },
-    
+
     colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE'],
-    
+
     credits: {
         enabled: false
     },
@@ -443,5 +447,59 @@
     ]
 });
  </script>
+ <script>
+ // Create the chart
+Highcharts.chart('repartition', {
+  chart: {
+    type: 'pie'
+  },
+  title: {
+    text: 'Répartition des 5 candidats favoris au sein de chaque quotidien'
+  },
+  subtitle: {
+    text: 'Le Monde'
+  },
+  plotOptions: {
+    series: {
+      dataLabels: {
+        enabled: true,
+        format: '{point.name}: {point.y:.1f}%'
+      }
+    }
+  },
+
+  tooltip: {
+    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> <br/>'
+  },
+  series: [{
+    name: 'Proportion d\'articles consacré au candidat ',
+    colorByPoint: true,
+    data: [{
+      name: 'Fillon',
+      y: 56.33,
+      drilldown: 'Fillon'
+    }, {
+      name: 'LePen',
+      y: 24.03,
+      drilldown: 'LePen'
+    }, {
+      name: 'Hamon',
+      y: 10.38,
+      drilldown: 'Hamon'
+    }, {
+      name: 'Macron',
+      y: 4.77,
+      drilldown: 'Macron'
+    }, {
+      name: 'Mélenchon',
+      y: 0.91,
+      drilldown: 'Mélenchon',
+      color: 'red'
+    }]
+  }],
+
+});
+</script>
 </body>
 </html>
