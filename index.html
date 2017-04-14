@@ -528,12 +528,14 @@ var quiz = [
        },
        {
            "question" : "Q1: Lequel des 5 favoris a été le plus couvert par Le Figaro",
-           "image" : "img/figaro.jpeg",
+           "image" : "img/figaro.png",
            "choices" : [
-                                   "Thomas Jefferson",
-                                   "Dwight D. Eisenhower",
-                                   "Benjamin Franklin",
-                                   "Abraham Lincoln"
+                          "Fillon",
+                          "Macron",
+                          "Hamon",
+                          "Mélenchon",
+                           "Lepen",
+             "Les 5 candidats favoris ont reçu une couverture semblable"
                                ],
            "correct" : "Thomas Jefferson",
            "explanation" : "The two dollar bill is seldom seen in circulation. As a result, some businesses are confused when presented with the note.",
@@ -579,7 +581,7 @@ var currentquestion = 0,
 
     function nextQuestion() {
         submt = true;
-        alert("nQ");
+        //alert("nQ");
         $('#explanation').empty();
         $('#question').text(quiz[currentquestion]['question']);
         $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
@@ -649,7 +651,7 @@ var currentquestion = 0,
         }
                $("#submitbutton").show();
             if (submt) {
-                alert("submit");
+                //alert("submit");
                 submt = false;
                 $('#submitbutton').css({
                     'color': '#000'
