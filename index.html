@@ -36,6 +36,9 @@
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/modules/data.js"></script>
   <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
 
 
 
@@ -78,7 +81,8 @@
 
 <div class = "intro">
 <h2>Présentation des journaux passés en revue</h2>
-  <p>Nous avons 6 journaux représentatifs à notre sens de l'échiquier politique pour analyser le traitement médiatique de la campagne électorale depuis le début de l'année 2017.
+  <p>Pour analyser le traitement médiatique de la campagne électorale depuis le début de l'année 2017,
+    Nous nous sommes focalisés sur 6 des journaux les plus importants en termes de volume de tirage annuel.
   </p></div>
 
 <div class = "intro-img">
@@ -126,6 +130,8 @@
 
 
 <div id="gr2" class="container-fluid">
+  <div id = "frame"
+      role = "content" >
   <h2>Comparez la cote des candidats au sein de chaque journal:</h2>
   <h4>Comparez la cote des candidats au sein de chaque journal</h4>
 
@@ -501,5 +507,221 @@ Highcharts.chart('repartition', {
 
 });
 </script>
+<script>
+var quiztitle = "Les journaux ont t-ils un candidat préféré?";
+
+
+var quiz = [
+       {
+           "question" : "Q1: Lequel des 5 favoris a été le plus couvert par Le Monde",
+           "image" : "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/220px-Albert_Einstein_Head.jpg",
+           "choices" : [
+                                   "Fillon",
+                                   "Macron",
+                                   "Hamon",
+                                   "Mélenchon",
+                                   "Lepen",
+                                   "Les 5 candidats favoris ont reçu une couverture semblable"
+                               ],
+           "correct" : "Fillon",
+           "explanation" : "Fillon réprésente en effet à lui seul 38% des articles du Monde depuis le début de l'année",
+       },
+       {
+           "question" : "Q2: Who is on the two dollar bill?",
+           "image" : "",
+           "choices" : [
+                                   "Thomas Jefferson",
+                                   "Dwight D. Eisenhower",
+                                   "Benjamin Franklin",
+                                   "Abraham Lincoln"
+                               ],
+           "correct" : "Thomas Jefferson",
+           "explanation" : "The two dollar bill is seldom seen in circulation. As a result, some businesses are confused when presented with the note.",
+       },
+       {
+           "question" : "LeQuel des 5 candidats a le plus couvert selon vous au sein du journal Le Monde?",
+           "image" : "",
+           "choices" : [
+                                   "First manned flight",
+                                   "California became a state",
+                                   "American Civil War began",
+                                   "Declaration of Independence"
+                               ],
+           "correct" : "American Civil War began",
+           "explanation" : "South Carolina came under attack when Confederate soldiers attacked Fort Sumter. The war lasted until April 9th 1865.",
+       },
+
+
+   ];
+
+
+var currentquestion = 0,
+    score = 0,
+    submt = true,
+    picked;
+
+    $(document).ready(function(){
+      $("#submitbutton").hide();
+
+    function htmlEncode(value) {
+        return $(document.createElement('div')).text(value).html();
+    }
+
+
+    function addChoices(choices) {
+        if (typeof choices !== "undefined" && $.type(choices) == "array") {
+            $('#choice-block').empty();
+            for (var i = 0; i < choices.length; i++) {
+                $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');
+            }
+        }
+    }
+
+    function nextQuestion() {
+        submt = true;
+        alert("nQ");
+        $('#explanation').empty();
+        $('#question').text(quiz[currentquestion]['question']);
+        $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+        if (quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != "") {
+            if ($('#question-image').length == 0) {
+                $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+            } else {
+                $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+            }
+        } else {
+            $('#question-image').remove();
+        }
+        addChoices(quiz[currentquestion]['choices']);
+        setupButtons();
+
+
+    }
+
+
+    function processQuestion(choice) {
+        alert(choice);
+        currentquestion++;
+         alert(currentquestion);
+        $("#submitbutton").hide();
+
+            if (currentquestion == quiz.length) {
+                endQuiz();
+            } else {
+
+                nextQuestion();
+            }
+
+    }
+
+
+    function setupButtons() {
+        $('.choice').on('mouseover', function () {
+            $(this).css({
+                'background-color': '#e1e1e1'
+            });
+        });
+        $('.choice').on('mouseout', function () {
+            $(this).css({
+                'background-color': '#fff'
+            });
+        })
+        $('.choice').on('click', function () {
+            alert("");
+            choice = $(this).attr('data-index');
+            $('.choice').removeAttr('style').off('mouseout mouseover');
+            $(this).css({
+                'border-color': '#222',
+                'font-weight': 700,
+                'background-color': '#c1c1c1'
+            });
+            if (quiz[currentquestion]['choices'][choice] == quiz[currentquestion]['correct']) {
+            $('.choice').eq(choice).css({
+                'background-color': '#50D943'
+            });
+            $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            score++;
+        } else {
+            $('.choice').eq(choice).css({
+                'background-color': '#D92623'
+            });
+            $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+        }
+               $("#submitbutton").show();
+            if (submt) {
+                alert("submit");
+                submt = false;
+                $('#submitbutton').css({
+                    'color': '#000'
+
+                });
+                $("#submitbutton").click(function(){
+                  alert("click");
+                     $('.choice').off('click');
+                    $(this).off('click');
+                    processQuestion(choice);
+                });
+            }
+        })
+    }
+
+
+    function endQuiz() {
+        $('#explanation').empty();
+        $('#question').empty();
+        $('#choice-block').empty();
+        $('#submitbutton').remove();
+        $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+        $(document.createElement('h2')).css({
+            'text-align': 'center',
+            'font-size': '4em'
+        }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
+    }
+
+
+    function init() {
+        //add title
+        if (typeof quiztitle !== "undefined" && $.type(quiztitle) === "string") {
+            $(document.createElement('h1')).text(quiztitle).appendTo('#frame');
+        } else {
+            $(document.createElement('h1')).text("Quiz").appendTo('#frame');
+        }
+
+        //add pager and questions
+        if (typeof quiz !== "undefined" && $.type(quiz) === "array") {
+            //add pager
+            $(document.createElement('p')).addClass('pager').attr('id', 'pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+            //add first question
+            $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+            //add image if present
+            if (quiz[0].hasOwnProperty('image') && quiz[0]['image'] != "") {
+                $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+            }
+            $(document.createElement('p')).addClass('explanation').attr('id', 'explanation').html('&nbsp;').appendTo('#frame');
+
+            //questions holder
+            $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+
+            //add choices
+            addChoices(quiz[0]['choices']);
+
+            //add submit button
+            $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({
+                'font-weight': 700,
+                'color': '#222',
+                'padding': '30px 0',
+             }).appendTo('#frame');
+
+
+          $("#submitbutton").hide();
+            setupButtons();
+        }
+    }
+
+    init();
+});
+</script>
+
+
 </body>
 </html>
