@@ -147,11 +147,13 @@ select:not([multiple]){
 
 #frame {
     max-width:700px;
+    max-width:400px;
     width:auto;
     border:1px solid #ccc;
     background:#fff;
-    padding:10px;
+    /*padding:10px;*/
     margin: 0 auto;
+    height: 400px;
 }
 
 p.pager {
