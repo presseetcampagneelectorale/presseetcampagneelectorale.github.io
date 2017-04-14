@@ -600,9 +600,9 @@ var currentquestion = 0,
 
 
     function processQuestion(choice) {
-        alert(choice);
+        //alert(choice);
         currentquestion++;
-         alert(currentquestion);
+         //alert(currentquestion);
         $("#submitbutton").hide();
 
             if (currentquestion == quiz.length) {
@@ -627,7 +627,7 @@ var currentquestion = 0,
             });
         })
         $('.choice').on('click', function () {
-            alert("");
+            //alert("");
             choice = $(this).attr('data-index');
             $('.choice').removeAttr('style').off('mouseout mouseover');
             $(this).css({
@@ -656,7 +656,7 @@ var currentquestion = 0,
 
                 });
                 $("#submitbutton").click(function(){
-                  alert("click");
+                  //alert("click");
                      $('.choice').off('click');
                     $(this).off('click');
                     processQuestion(choice);
