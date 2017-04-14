@@ -676,11 +676,11 @@ var currentquestion = 0,
         $('#question').empty();
         $('#choice-block').empty();
         $('#submitbutton').remove();
-        $('#question').text("Bravo! Vous avez " + score + " sur " + quiz.length + " correct.");
-        $(document.createElement('h2')).css({
-            'text-align': 'center',
-            'font-size': '4em'
-        }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
+        $('#question').text(" Vous avez " + score + " réponses correctes"+  " sur " + quiz.length + " questions.");
+        // $(document.createElement('h2')).css({
+        //     'text-align': 'center',
+        //     'font-size': '4em'
+        // }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
     }
 
 
