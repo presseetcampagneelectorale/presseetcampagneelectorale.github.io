@@ -100,6 +100,27 @@ padding: 100px 25px;
   padding-left: 10px;
   padding-right: 10px;
 }
+
+/**************** Graphique 3**************************/
+
+
+#container, #container2{
+  float: left;
+  width: 50%;
+  padding-bottom: 30px;
+}
+
+
+/***********************************************/
+
+/*Graphique 4 justice*/
+#container3, #container4{
+  float: left;
+  width: 50%;
+  padding-bottom: 30px;
+}
+
+
 /***********************************************/
 
 #footer {
@@ -195,3 +216,4 @@ img.question-image {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+
