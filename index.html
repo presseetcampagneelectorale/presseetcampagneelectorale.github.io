@@ -527,30 +527,30 @@ var quiz = [
            "explanation" : "Fillon réprésente en effet à lui seul 38% des articles du Monde depuis le début de l'année",
        },
        {
-           "question" : "Q1: Lequel des 5 favoris a été le plus couvert par Le Figaro",
+           "question" : "Q2: Lequel des 5 favoris a été le plus couvert par Le Figaro",
            "image" : "img/figaro.png",
            "choices" : [
                           "Fillon",
                           "Macron",
                           "Hamon",
                           "Mélenchon",
-                           "Lepen",
+                          "Lepen",
              "Les 5 candidats favoris ont reçu une couverture semblable"
                                ],
            "correct" : "Thomas Jefferson",
            "explanation" : "The two dollar bill is seldom seen in circulation. As a result, some businesses are confused when presented with the note.",
        },
        {
-           "question" : "LeQuel des 5 candidats a le plus couvert selon vous au sein du journal Le Monde?",
+           "question" : "Q3: Lequel des 5 favoris a été le plus couvert par Libération",
            "image" : "",
            "choices" : [
-                                   "First manned flight",
-                                   "California became a state",
-                                   "American Civil War began",
-                                   "Declaration of Independence"
+                                   "Fillon",
+                                   "Macron became a state",
+                                   "Hamon",
+                                   "Lepen"
                                ],
-           "correct" : "American Civil War began",
-           "explanation" : "South Carolina came under attack when Confederate soldiers attacked Fort Sumter. The war lasted until April 9th 1865.",
+           "correct" : "",
+           "explanation" : " En effet, ",
        },
 
 
@@ -708,14 +708,14 @@ var currentquestion = 0,
             addChoices(quiz[0]['choices']);
 
             //add submit button
-            $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({
-                'font-weight': 700,
-                'color': '#222',
-                'padding': '30px 0',
-             }).appendTo('#frame');
+            //$(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({
+            //    'font-weight': 700,
+            //    'color': '#222',
+            //    'padding': '30px 0',
+            // }).appendTo('#frame');
 
 
-          $("#submitbutton").hide();
+          //$("#submitbutton").hide();
             setupButtons();
         }
     }
