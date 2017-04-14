@@ -143,29 +143,12 @@ select:not([multiple]){
 #mySelect {
     border-radius:0;
 }
-<style type="text/css" media="all">
 /*css reset */
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, code, small, strike, strong, sub, sup, b, u, i {
-    border:0;
-    font-size:100%;
-    font:inherit;
-    vertical-align:baseline;
-    margin:0;
-    padding:0;
-}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display:block;
 }
-body {
-    line-height:1;
-    font:normal 0.9em/1em"Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-ol, ul {
-    list-style:none;
-}
-strong {
-    font-weight:700;
-}
+
 #frame {
     max-width:620px;
     width:auto;
@@ -228,4 +211,3 @@ img.question-image {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-</style>
