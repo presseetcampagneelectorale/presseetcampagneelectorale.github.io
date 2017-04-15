@@ -1232,6 +1232,7 @@ var currentquestion = 0,
         })
         $('.choice').on('click', function () {
             //alert("");
+             $("#repartition").hide();
             choice = $(this).attr('data-index');
             $('.choice').removeAttr('style').off('mouseout mouseover');
             $(this).css({
