@@ -1234,7 +1234,6 @@ var currentquestion = 0,
         $('.choice').on('click', function () {
             //alert("");
              $("#repartition").show();
-             $("#repartition").appendTo('#myquizz');
             choice = $(this).attr('data-index');
             $('.choice').removeAttr('style').off('mouseout mouseover');
             $(this).css({
@@ -1319,7 +1318,7 @@ var currentquestion = 0,
                 'color': '#222',
                 'padding': '30px 0',
              }).appendTo('#frame');
-
+           $(document.createElement('p')).addClass('explanation').attr('id', 'explanation').html('&nbsp;').appendTo('#frame');
 
           $("#submitbutton").hide();
             setupButtons();
