@@ -296,7 +296,7 @@
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   <!--<div id='highcharts-emibiba'><script src='//cloud.highcharts.com/inject/emibiba' defer='defer'></script></div>-->
-  
+
 
 
 <div class="fleche"> <a href="#myPage" title="To Top">
@@ -1416,6 +1416,20 @@ var currentquestion = 0,
     ]
 });</script>
 
+<script>
+
+// fix dimensions of chart that was in a hidden element
+  jQuery(document).on( 'shown.bs.tab', 'a[data-toggle="tab"]', function (e) { // on tab selection event
+      jQuery( ".contenu_onglet" ).each(function() { // target each element with the .contains-chart class
+          var chart = jQuery(this).highcharts(); // target the chart itself
+          chart.reflow() // reflow that chart
+      });
+  })
+
+  });
+
+</script>
+</script>
 <!--Script Monde justice-->
 <script>Highcharts.chart('container4', {
     chart: {
