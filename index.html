@@ -1166,6 +1166,7 @@ var currentquestion = 0,
 
     $(document).ready(function(){
       $("#submitbutton").hide();
+      $("#repartition").hide()
 
     function htmlEncode(value) {
         return $(document.createElement('div')).text(value).html();
@@ -1232,7 +1233,7 @@ var currentquestion = 0,
         })
         $('.choice').on('click', function () {
             //alert("");
-             $("#repartition").hide();
+             $("#repartition").show();
             choice = $(this).attr('data-index');
             $('.choice').removeAttr('style').off('mouseout mouseover');
             $(this).css({
