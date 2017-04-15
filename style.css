@@ -209,7 +209,7 @@ select:not([multiple]){
 #frame {
   /*max-width:620px;*/
       width:auto;
-      border:1px solid #ccc;
+      /*border:1px solid #ccc;*/
       background:#fff;
       /*padding:10px;*/
       /*margin:3px;*/
