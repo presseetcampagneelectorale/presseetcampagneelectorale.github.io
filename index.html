@@ -1089,9 +1089,11 @@ Highcharts.chart('repartition', {
 
 </script>
 <script>
-$('#onglet_monde').click(function () {
-    $(this).highcharts().reflow();
-});
+jQuery(document).on( '#onglet_monde', function () {
+    $( '#onglet_monde' ).each(function() {
+        $(this).highcharts().reflow();
+    });
+})
 </script>
 <script>
 var quiztitle = "QUIZZ: Les journaux ont t-ils un candidat préféré?";
