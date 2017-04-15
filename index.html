@@ -214,11 +214,56 @@
 
 <div id="gr3" class="container-fluid">
   <h2>Graphe 3</h2>
-  <h4>Lorem ipsum..</h4>
   <p>Intéressons-nous dans un premier temps à la couverture de la campagne par les différents médias. Combien d’articles ont été écrits sur chacun des candidats « majeurs » à l’élection présidentielle depuis début 2017 ? La réponse par le graphique ci-dessous.
 </p>
-  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-  <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<div class="systeme_onglets">
+        <div class="onglets">
+            <span class="onglet_0 onglet" id="onglet_figaro" onclick="javascript:change_onglet('figaro');">Le Figaro</span>
+            <span class="onglet_0 onglet" id="onglet_monde" onclick="javascript:change_onglet('monde');">Le Monde</span>
+            <span class="onglet_0 onglet" id="onglet_liberation" onclick="javascript:change_onglet('liberation');">Libération</span>
+            <span class="onglet_0 onglet" id="onglet_express" onclick="javascript:change_onglet('express');">L'Express</span>
+            <span class="onglet_0 onglet" id="onglet_jdd" onclick="javascript:change_onglet('jdd');">Le JDD</span>
+            <span class="onglet_0 onglet" id="onglet_obs" onclick="javascript:change_onglet('obs');">L'Obs</span>
+        </div>
+  
+        <div class="contenu_onglets">
+            <div class="contenu_onglet" id="contenu_onglet_figaro">
+                <h1>Le figaro</h1></br>
+                  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+                  <p>Le Figaro semble faire une couverture beaucoup plus équilibrée de la campagne présidentielle que Le Monde par exemple. Chacun des candidats possède ses périodes d’intense couverture, les courbes se croisant de manière systématique semaine après semaine. Par ailleurs, l’affaire Fillon n’est pas particulièrement suivie par ce journal. Au moment où Le Monde publie 70 articles sur le candidat Fillon, le quotidien de droite en publie seulement 10 (et largement moins que les autres candidats) … </p>
+            </div>
+
+            <div class="contenu_onglet" id="contenu_onglet_monde">
+                <h1>Le Monde</h1></br>
+                <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+                <p>Comme nous pouvons le voir, Le Monde traite les candidats en fonction de l’actualité médiatique. Le premier pic de Hamon (à la fin Janvier) correspond aux primaires PS (premier et deuxième Tour), les pics de Fillon sont associés respectivement au déclenchement des affaires (une semaine après le pic Hamon) et à l’abandon progressif du parti des Républicains (fin février). Notons une forte tendance macroniste sur la dernière semaine avec plus de 3 articles quotidiens sur le candidat. Les autres candidats (Le Pen et Mélenchon) sont faiblement traités sur la période considérée.
+</p>
+            </div>
+            <div class="contenu_onglet" id="contenu_onglet_liberation">
+                <h1>Libération</h1></br>
+                <div id="container_libe" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+                <p>Libération présente une couverture de campagne similaire à celle du Monde (avec les mêmes formes et les mêmes pics). Cependant, constatons que le premier pic de Fillon (affaires) est d’ampleur similaire à celui du pic Hamon. On constate également cette tendance macroniste commune à beaucoup de journaux sur le mois de mars, même si elle est d’ampleur beaucoup plus faible.</p>
+            </div>
+            <div class="contenu_onglet" id="contenu_onglet_express">
+              <h1>L'Express</h1></br>
+              <div id="container_expr" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+              <p>L’Express effectue une couverture similaire à celle du Monde : On retrouve les mêmes pics aux mêmes endroits pour les gros candidats, même s’ils ont cependant des intensités bien différentes. Par exemple, l’affaire Fillon est beaucoup plus couverte qu’au Monde (plus de 12 articles par jour en pleine période !), et la tendance macroniste sur les dernières semaines du mois de mars est plus importante qu’au sein du quotidien du soir. La couverture de la campagne est donc celle d’un journal de tendance politique libérale.</p>
+            </div>
+            <div class="contenu_onglet" id="contenu_onglet_jdd">
+              <h1>Le Journal du Dimanche</h1></br>
+              <div id="container_jdd" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+              <p>Le JDD effectue lui aussi une couverture de la campagne présidentielle analogue à celle du Monde (des pics autour des primaires, des affaires et des défections des candidats). Cependant, la couverture de Fillon s’effondre sur les dernières semaines au profit de Macron qui devient le candidat principalement traité par l’hebdomadaire au cours du mois de mars.</p>
+            </div>
+            <div class="contenu_onglet" id="contenu_onglet_obs">
+              <h1>L'Obs</h1></br>
+              <div id="container_obs" style = "min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+              <p>L’Obs lui aussi couvre la campagne de manière analogue à celle des autres journaux. Cependant, on constate qu’il n’y a aucune dynamique Macron sur le mois de mars, c’est-à-dire que le seul candidat à bénéficier d’un traitement spécifique est le candidat des Républicains. Par ailleurs, le Pic Fillon des affaires est beaucoup plus important que celui associé aux primaires socialistes.</p>
+            </div>
+
+        </div>
+    </div>
+
 </div>
 
 <div id="gr4" class="container-fluid bg-grey">
@@ -367,7 +412,7 @@
         type: 'spline'
     },
     title: {
-        text: 'Traitement médiatique du Figaro avec ou sans les scandales judiciaires'
+        text: 'Traitement médiatique du Figaro'
     },
     subtitle: {
         text: "Proportion d'articles sortis par semaine"
@@ -469,7 +514,7 @@
         type: 'spline'
     },
     title: {
-        text: 'Traitement médiatique du Monde avec ou sans les scandales judiciaires'
+        text: 'Traitement médiatique du Monde'
     },
     subtitle: {
         text: "Proportion d'articles sortis par semaine"
@@ -560,6 +605,423 @@
             symbol: 'diamond'
         },
         data: [4,4,2,2,7,8,10,15,3,7,9,10],
+        color:"#FF0000"
+    }
+    ]
+});</script>
+
+<!--Graphique libération -->
+
+<script>Highcharts.chart('container_libe', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: 'Traitement médiatique de Libération'
+    },
+    subtitle: {
+        text: "Proportion d'articles sortis par semaine"
+    },
+    xAxis: {
+        title:{
+          text: "Semaine de 2017"
+        },
+        categories: ['1', '2', '3', '4', '5', '6',
+            '7', '8', '9', '10', '11', '12']
+    },
+    yAxis: {
+        title: {
+            text: "Volume d'articles"
+        }
+    },
+    tooltip: {
+        formatter: function () {
+        if(this.point.name == "Début de l'affaire Fillon")
+          {return "<b>"+this.point.name +" : </b>" + "<br/>" + "Nombre d'articles sur " +this.series.name + " : " + this.y ;}
+        else
+            {return '<b> Semaine ' + this.x + " : "+'</b><br/>'+
+                "Nombre d'articles sur "+this.series.name +" : " + this.y ;}
+        }
+    },
+    
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 2,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+
+
+    series: [{
+        name: 'Fillon',
+        marker: {
+            symbol: 'square'
+        },
+        data: [0,0,4,{
+            difftool:true,
+            name : "Début de l'affaire Fillon",
+            y: 16, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },27,23,9,6,43,35,31,23],
+        color:"#4169E1",
+        
+    },
+
+    
+    {
+        name: 'Hamon',
+        marker: {
+            symbol: 'circle'
+        },
+        data: [3,4,5,19,25,5,6,19,19,22,15,8],
+        color : "#008000"
+    },
+   
+    {
+        visible : false,
+        name: 'Le Pen',
+        marker: {
+            symbol: 'triangle'
+        },
+        data: [1,2,9,6,12,11,8,17,22,16,8,11],
+        color : "#00008B"
+    },
+    
+    {
+        visible : false,
+        name: 'Macron',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [1,3,4,2,6,11,13,27,23,25,29,22],
+        color : "#FFA500",
+    },
+    
+ 
+    {
+        visible : false,
+        name: 'Mélenchon',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [4,7,5,3,4,8,5,21,6,8,10,7],
+        color:"#FF0000"
+    }
+    ]
+});</script>
+
+<!--Graphique express-->
+<script>Highcharts.chart('container_expr', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: "Traitement médiatique de l'Express"
+    },
+    subtitle: {
+        text: "Proportion d'articles sortis par semaine"
+    },
+    xAxis: {
+        title:{
+          text: "Semaine de 2017"
+        },
+        categories: ['1', '2', '3', '4', '5', '6',
+            '7', '8', '9', '10', '11', '12']
+    },
+    yAxis: {
+        title: {
+            text: "Volume d'articles"
+        }
+    },
+    tooltip: {
+        formatter: function () {
+        if(this.point.name == "Début de l'affaire Fillon")
+          {return "<b>"+this.point.name +" : </b>" + "<br/>" + "Nombre d'articles sur " +this.series.name + " : " + this.y ;}
+        else
+            {return '<b> Semaine ' + this.x + " : "+'</b><br/>'+
+                "Nombre d'articles sur "+this.series.name +" : " + this.y ;}
+        }
+    },
+    
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 2,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+
+    series: [{
+        name: 'Fillon',
+        marker: {
+            symbol: 'square'
+        },
+        data: [5,25,7,{
+            difftool:true,
+            name : "Début de l'affaire Fillon",
+            y: 36, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },60,65,15,7,64,57,56,46],
+        color:"#4169E1",
+        
+    },
+
+    
+    {
+        name: 'Hamon',
+        marker: {
+            symbol: 'circle'
+        },
+        data: [10,15,27,71,53,28,9,14,12,16,18,15],
+        color : "#008000"
+    },
+   
+    {
+        visible : false,
+        name: 'Le Pen',
+        marker: {
+            symbol: 'triangle'
+        },
+        data: [12,15,24,15,24,32,16,22,27,16,9,18],
+        color : "#00008B"
+    },
+    
+    {
+        visible : false,
+        name: 'Macron',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [8,28,38,18,43,24,19,29,33,33,37,36],
+        color : "#FFA500",
+    },
+    
+ 
+    {
+        visible : false,
+        name: 'Mélenchon',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [3,20,8,16,11,19,5,10,3,3,5,10],
+        color:"#FF0000"
+    }
+    ]
+});</script>
+
+<!-- Graphique JDD -->
+<script>Highcharts.chart('container_jdd', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: "Traitement médiatique du Journal Du Dimanche"
+    },
+    subtitle: {
+        text: "Proportion d'articles sortis par semaine"
+    },
+    xAxis: {
+        title:{
+          text: "Semaine de 2017"
+        },
+        categories: ['1', '2', '3', '4', '5', '6',
+            '7', '8', '9', '10', '11', '12']
+    },
+    yAxis: {
+        title: {
+            text: "Volume d'articles"
+        }
+    },
+    tooltip: {
+        formatter: function () {
+        if(this.point.name == "Début de l'affaire Fillon")
+          {return "<b>"+this.point.name +" : </b>" + "<br/>" + "Nombre d'articles sur " +this.series.name + " : " + this.y ;}
+        else
+            {return '<b> Semaine ' + this.x + " : "+'</b><br/>'+
+                "Nombre d'articles sur "+this.series.name +" : " + this.y ;}
+        }
+    },
+    
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 2,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+
+
+    series: [{
+        name: 'Fillon',
+        marker: {
+            symbol: 'square'
+        },
+        data: [5,10,7,{
+            difftool:true,
+            name : "Début de l'affaire Fillon",
+            y: 16, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },34,36,26,15,43,25,20,18],
+        color:"#4169E1",
+        
+    },
+
+    
+    {
+        name: 'Hamon',
+        marker: {
+            symbol: 'circle'
+        },
+        data: [4,3,8,26,25,8,10,12,8,8,12,11],
+        color : "#008000"
+    },
+   
+    {
+        visible : false,
+        name: 'Le Pen',
+        marker: {
+            symbol: 'triangle'
+        },
+        data: [0,3,4,2,12,6,8,10,16,11,12,6],
+        color : "#00008B"
+    },
+    
+    {
+        visible : false,
+        name: 'Macron',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [0,0,4,9,8,9,26,18,16,18,17,20],
+        color : "#FFA500",
+    },
+    
+ 
+    {
+        visible : false,
+        name: 'Mélenchon',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [0,4,4,3,6,5,5,5,2,3,7,5],
+        color:"#FF0000"
+    }
+    ]
+});</script>
+
+
+<!-- Graphique OBS -->
+<script>Highcharts.chart('container_obs', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: "Traitement médiatique de l'OBS"
+    },
+    subtitle: {
+        text: "Proportion d'articles sortis par semaine"
+    },
+    xAxis: {
+        title:{
+          text: "Semaine de 2017"
+        },
+        categories: ['1', '2', '3', '4', '5', '6',
+            '7', '8', '9', '10', '11', '12']
+    },
+    yAxis: {
+        title: {
+            text: "Volume d'articles"
+        }
+    },
+    tooltip: {
+        formatter: function () {
+        if(this.point.name == "Début de l'affaire Fillon")
+          {return "<b>"+this.point.name +" : </b>" + "<br/>" + "Nombre d'articles sur " +this.series.name + " : " + this.y ;}
+        else
+            {return '<b> Semaine ' + this.x + " : "+'</b><br/>'+
+                "Nombre d'articles sur "+this.series.name +" : " + this.y ;}
+        }
+    },
+    
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 2,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+
+
+    series: [{
+        name: 'Fillon',
+        marker: {
+            symbol: 'square'
+        },
+        data: [5,5,5,{
+            difftool:true,
+            name : "Début de l'affaire Fillon",
+            y: 23, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },57,39,20,13,46,34,30,26],
+        color:"#4169E1",
+        
+    },
+
+    
+    {
+        name: 'Hamon',
+        marker: {
+            symbol: 'circle'
+        },
+        data: [6,6,5,24,10,8,4,15,13,15,11,9],
+        color : "#008000"
+    },
+   
+    {
+        visible : false,
+        name: 'Le Pen',
+        marker: {
+            symbol: 'triangle'
+        },
+        data: [0,2,2,1,10,12,6,6,8,7,3,6],
+        color : "#00008B"
+    },
+    
+    {
+        visible : false,
+        name: 'Macron',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [5,7,7,5,12,11,23,13,11,15,13,15],
+        color : "#FFA500",
+    },
+    
+ 
+    {
+        visible : false,
+        name: 'Mélenchon',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [0,0,3,4,5,7,4,10,4,0,3,5],
         color:"#FF0000"
     }
     ]

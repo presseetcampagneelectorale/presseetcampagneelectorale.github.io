@@ -46,7 +46,7 @@ padding-left: 100px;
     color : #fafafa;
 
 
-
+/********** Navbar *******************/
 
 }
 
@@ -90,7 +90,10 @@ padding: 100px 25px;
     color: #fff !important;
 }
 
-/*Premier graphique*/
+/*****************************************************/
+
+
+/*Graphique agrégé */
 #container0, .text1{
   float: left;
   width: 50%;
@@ -101,14 +104,51 @@ padding: 100px 25px;
   padding-right: 10px;
 }
 
-/**************** Graphique 3**************************/
+
+/*******************************************************/
 
 
-#container, #container2{
-  float: left;
-  width: 50%;
-  padding-bottom: 30px;
-}
+
+/**************** Graphique courbes **************************/
+.onglet
+        {
+                display:inline-block;
+                margin-left:3px;
+                margin-right:3px;
+                padding:3px;
+                border:1px solid black;
+                cursor:pointer;
+        }
+        .onglet_0
+        {
+                background:#bbbbbb;
+                border-bottom:1px solid black;
+        }
+        .onglet_1
+        {
+                background:#dddddd;
+                border-bottom:0px solid black;
+                padding-bottom:4px;
+        }
+        .contenu_onglet
+        {
+                background-color:#dddddd;
+                border:1px solid black;
+                margin-top:-1px;
+                padding:5px;
+                display:none;
+        }
+        ul
+        {
+                margin-top:0px;
+                margin-bottom:0px;
+                margin-left:-10px
+        }
+        h1
+        {
+                margin:0px;
+                padding:0px;
+        }
 
 
 /***********************************************/
