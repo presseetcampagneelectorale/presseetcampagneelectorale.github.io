@@ -1234,7 +1234,6 @@ var currentquestion = 0,
         $('.choice').on('click', function () {
             //alert("");
              $("#repartition").show();
-             $("#repartition").appendTo('#frame');
              $("#repartition").appendTo('#myquizz');
             choice = $(this).attr('data-index');
             $('.choice').removeAttr('style').off('mouseout mouseover');
