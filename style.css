@@ -207,7 +207,7 @@ select:not([multiple]){
 /*css reset */
 
 #frame {
-  max-width:620px;
+  /*max-width:620px;*/
       width:auto;
       border:1px solid #ccc;
       background:#fff;
@@ -256,4 +256,3 @@ img.question-image {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-
