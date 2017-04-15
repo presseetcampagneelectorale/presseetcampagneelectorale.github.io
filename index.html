@@ -360,13 +360,14 @@
         data: [2622,1730,1510,1150,674]
     }]
 });</script>
+
 <!--Script courbes figaro-->
 <script>Highcharts.chart('container', {
     chart: {
         type: 'spline'
     },
     title: {
-        text: 'Traitement médiatique du Figaro'
+        text: 'Traitement médiatique du Figaro avec ou sans les scandales judiciaires'
     },
     subtitle: {
         text: "Proportion d'articles sortis par semaine"
@@ -392,10 +393,11 @@
                 "Nombre d'articles sur "+this.series.name +" : " + this.y ;}
         }
     },
+    
     plotOptions: {
         spline: {
             marker: {
-                radius: 4,
+                radius: 2,
                 lineColor: '#666666',
                 lineWidth: 1
             }
@@ -406,18 +408,18 @@
         marker: {
             symbol: 'square'
         },
-
         data: [2,2,3,{
-          name:"Début de l'affaire Fillon"
+            difftool:true,
+            name : "Début de l'affaire Fillon",
             y: 6, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
             marker: {
                 symbol: 'url(img/explosion.png)',
                 label: "gsgse"}
                 },17,13,14,6,30,28,26,5],
-                color : "#4169E1"
-
+        color:"#4169E1",
+        
     },
-
+    
     {
         name: 'Hamon',
         marker: {
@@ -426,7 +428,7 @@
         data: [3,5,5,20,24,14,14,22,13,27,28,16],
         color : "#008000"
     },
-
+   
     {
         visible : false,
         name: 'Le Pen',
@@ -436,7 +438,7 @@
         data: [4,0,9,4,14,16,12,31,26,24,12,18],
         color : "#00008B"
     },
-
+    
     {
         visible : false,
         name: 'Macron',
@@ -446,6 +448,7 @@
         data: [ 3,3,5,1,10,8,22,35,29,13,24,12],
         color : "#FFA500",
     },
+    
 
     {
         visible : false,
@@ -457,8 +460,7 @@
         color:"#FF0000"
     }
     ]
-});
- </script>
+});</script>
 
 <!--Script courbe Monde-->
 
@@ -467,7 +469,7 @@
         type: 'spline'
     },
     title: {
-        text: 'Traitement médiatique du Monde'
+        text: 'Traitement médiatique du Monde avec ou sans les scandales judiciaires'
     },
     subtitle: {
         text: "Proportion d'articles sortis par semaine"
@@ -509,6 +511,8 @@
             symbol: 'square'
         },
         data: [9,14,12,{
+            difftool:true,
+            name : "Début de l'affaire Fillon",
             y: 33, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
             marker: {
                 symbol: 'url(img/explosion.png)',
@@ -548,7 +552,7 @@
         color : "#FFA500",
     },
     
-
+ 
     {
         visible : false,
         name: 'Mélenchon',
