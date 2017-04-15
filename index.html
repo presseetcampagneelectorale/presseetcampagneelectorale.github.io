@@ -140,7 +140,7 @@
 </div>
 </div> -->
 <div class="container-fluid">
-  <div class="row-fluid">
+  <div id="myquizz" class="row-fluid">
           <div class="span6" id="frame" > </div>
           <div class="span6" id="repartition"> </div>
 
@@ -1234,6 +1234,8 @@ var currentquestion = 0,
         $('.choice').on('click', function () {
             //alert("");
              $("#repartition").show();
+             $("#repartition").appendTo('#frame');
+             $("#repartition").appendTo('#myquizz');
             choice = $(this).attr('data-index');
             $('.choice').removeAttr('style').off('mouseout mouseover');
             $(this).css({
