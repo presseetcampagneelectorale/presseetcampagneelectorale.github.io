@@ -1090,10 +1090,8 @@ Highcharts.chart('repartition', {
 </script>
 <script>
 jQuery(document).on( '#onglet_liberation', function () {
-    $( '#container_libe' ).each(function() {
-        $(this).highcharts().reflow();
-    });
-})
+    $( '#container_libe' ).highcharts().reflow()});
+
 </script>
 <script>
 var quiztitle = "QUIZZ: Les journaux ont t-ils un candidat préféré?";
