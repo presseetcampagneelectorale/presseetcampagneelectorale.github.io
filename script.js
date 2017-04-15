@@ -26,9 +26,9 @@ $(document).ready(function(){
 
 //Hover text sous les images
 
-$('.intro-img img').hover( function() { 
+$('.intro-img img').hover( function() {
     $('.hover-text').eq($('.intro-img img').index($(this))).show();
- } , function() { 
+ } , function() {
     $('.hover-text').eq($('.intro-img img').index($(this))).hide();
  });
 
@@ -65,11 +65,11 @@ Highcharts.chart('container0', {
         series: {
                         colorByPoint: true
                     }
-        
+
     },
-    
+
     colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE'],
-    
+
     credits: {
         enabled: false
     },
@@ -123,7 +123,7 @@ Highcharts.chart('container', {
         marker: {
             symbol: 'square'
         },
-        
+
         data: [2,2,{
             y: 3, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
             marker: {
@@ -132,8 +132,8 @@ Highcharts.chart('container', {
                 },6,17,13,14,6,30,28,26,5],
                 color : "#4169E1"
 
-    }, 
-    
+    },
+
     {
         name: 'Hamon',
         marker: {
@@ -142,7 +142,7 @@ Highcharts.chart('container', {
         data: [3,5,5,20,24,14,14,22,13,27,28,16],
         color : "#008000"
     },
-   
+
     {
         visible : false,
         name: 'Le Pen',
@@ -152,7 +152,7 @@ Highcharts.chart('container', {
         data: [4,0,9,4,14,16,12,31,26,24,12,18],
         color : "#00008B"
     },
-    
+
     {
         visible : false,
         name: 'Macron',
@@ -162,7 +162,7 @@ Highcharts.chart('container', {
         data: [ 3,3,5,1,10,8,22,35,29,13,24,12],
         color : "#FFA500",
     },
-    
+
     {
         visible : false,
         name: 'Mélenchon',
@@ -184,10 +184,9 @@ function change_onglet(name)
                         document.getElementById('onglet_'+name).className = 'onglet_1 onglet';
                         document.getElementById('contenu_onglet_'+anc_onglet).style.display = 'none';
                         document.getElementById('contenu_onglet_'+name).style.display = 'block';
+                        document.getElementById('contenu_onglet_'+name).Highcharts.reflow();
                         anc_onglet = name;
                 }
 
 var anc_onglet = 'figaro';
                 change_onglet(anc_onglet);
-
-
