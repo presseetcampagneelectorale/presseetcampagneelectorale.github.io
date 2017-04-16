@@ -189,3 +189,8 @@ function change_onglet(name)
 
 var anc_onglet = 'figaro';
                 change_onglet(anc_onglet);
+
+
+
+
+

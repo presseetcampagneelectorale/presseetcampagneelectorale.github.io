@@ -100,7 +100,6 @@ padding: 100px 25px;
   padding-left: 10px;
   padding-right: 10px;
 }
-<<<<<<< HEAD
 
 
 /*******************************************************/
@@ -138,7 +137,6 @@ padding: 100px 25px;
         }
 
 
-
 /***********************************************/
 
 /*Graphique 4 justice*/
@@ -149,8 +147,7 @@ padding: 100px 25px;
 }
 
 
-=======
->>>>>>> 12dda3f329912693bc8ed09375d2accecdbd0bc7
+
 /***********************************************/
 
 #footer {
@@ -165,13 +162,6 @@ padding: 100px 25px;
 }
 
 
-.fleche .glyphicon {
-font-size: 20px;
-color: #283e4a;
-padding: 2px
-margin-left: auto;
-margin-right: auto;
-}
 
 .result {
   display: none;
