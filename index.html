@@ -247,10 +247,16 @@
 </div>
  <!--Candidat1=LEPEN-->
   <div class="container-fluid">
-  <div class="result" data-candidat1="LePen" data-candidat2="Poutou"> LePen VS Poutou</div>
+  <div class="result container" data-candidat1="LePen" data-candidat2="Poutou"> LePen VS Poutou
+
+  <div class="timer" id="controllable" data-from="0" data-to="100" data-refresh-interval="50" ></div>
+
+   </div>
  <div class="result" data-candidat1="LePen" data-candidat2="Lasalle"> LePen VS Lasalle</div>
  <div class="result" data-candidat1="LePen" data-candidat2="Arthaud"> LePen VS Arthaud</div>
  <div class="result" data-candidat1="LePen" data-candidat2="Cheminade"> LePen VS Cheminade</div>
+ <div class="result" data-candidat1="LePen" data-candidat2="Dupont-Aignan"> LePen VS Dupont-Aignan</div>
+ <div class="result" data-candidat1="LePen" data-candidat2="Asselineau"> LePen VS Asselineau</div>
  <!--Candidat1=Macron-->
   <div class="result" data-candidat1="Macron" data-candidat2="Poutou"> Macron VS Poutou</div>
  <div class="result" data-candidat1="Macron" data-candidat2="Lasalle"> Macron VS Lasalle</div>
@@ -292,6 +298,58 @@
    });
 
  </script>
+
+ <script>
+ var counter=30;
+ var total=100;
+ var timing = 1000;
+ var candidat2='Poutou'
+
+$(document).ready(function(){
+ var value = parseInt(counter);
+
+ for(var i=0;i<total;i++){
+   var man = $(".container").append('<div class="man" id="'+i+'"></div>');
+   }
+ $('.container').css('width', total/4 * (parseInt($('.man').css('width'))+parseInt($('.man').css('margin'))*2));
+
+ $('.timer').css('width', $('.container').css('width'));
+ $('.timer').css('top', (parseInt($('.man').css('height'))*4/2-50)+'px');
+ $('.timer').attr('data-to', value);
+ $('.timer').attr('data-speed', timing);
+
+ $('.man').waitForImages({
+   waitForAll: true,
+   finished: function() {
+     fadein(0, parseInt(counter));
+     $('.timer').each(count);
+   }
+ });
+
+});
+
+function fadein(i, c){
+ if(i<c){
+   setTimeout(function(){
+
+     $('#'+i).animate({'opacity':'+=1'},  50);
+     i++;
+     fadein(i, c);
+   }, (timing/counter));
+
+ }
+}
+
+function count(options) {
+ var $this = $(this);
+ options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+
+ options.formatter = function(value,settings){
+   return value.toFixed(settings.decimals) +' fois plus d\'articles que'+ ' '+ candidat2;
+ };
+ $this.countTo(options);
+}
+</script>
 
 
 
