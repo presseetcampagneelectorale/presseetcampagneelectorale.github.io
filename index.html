@@ -252,7 +252,7 @@
 </div>
 </div>
  <!--Candidat1=LEPEN-->
-  <div class="row">
+  <div class="container-fluid">
   <div class="result" data-candidat1="LePen" data-candidat2="Poutou"> LePen VS Poutou</div>
  <div class="result" data-candidat1="LePen" data-candidat2="Lasalle"> LePen VS Lasalle</div>
  <div class="result" data-candidat1="LePen" data-candidat2="Arthaud"> LePen VS Arthaud</div>
@@ -297,10 +297,10 @@
      }
    });
 
- </script> -->
--->
+ </script>
 
-</div>
+
+
 
 
 
@@ -1166,7 +1166,7 @@ var currentquestion = 0,
 
     $(document).ready(function(){
       $("#submitbutton").hide();
-      $("#repartition").hide()
+      //$("#repartition").hide()
 
     function htmlEncode(value) {
         return $(document.createElement('div')).text(value).html();
@@ -1233,7 +1233,7 @@ var currentquestion = 0,
         })
         $('.choice').on('click', function () {
             //alert("");
-             $("#repartition").show();
+             //$("#repartition").show();
             choice = $(this).attr('data-index');
             $('.choice').removeAttr('style').off('mouseout mouseover');
             $(this).css({
