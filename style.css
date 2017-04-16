@@ -214,17 +214,7 @@ img.question-image {
     border-radius: 5px;
 }
 
-
-.man{
-  background:url('https://googledrive.com/host/0BxAy_xtcSev3U2NkRGRRTVQ5TnM/man.jpg');
-  float:left;
-  width:20px;
-  height:90px;
-  margin:5px;
-  background-repeat:no-repeat;
-  opacity:0.2;
-}
-.timer{
+.count{
   opacity:1;
   z-index:100;
   width:600px;
