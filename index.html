@@ -311,9 +311,9 @@ $(document).ready(function(){
  for(var i=0;i<total;i++){
    var man = $(".result").append('<div class="man" id="'+i+'"></div>');
    }
- $('.container').css('width', total/4 * (parseInt($('.man').css('width'))+parseInt($('.man').css('margin'))*2));
+ $('.result').css('width', total/4 * (parseInt($('.man').css('width'))+parseInt($('.man').css('margin'))*2));
 
- $('.timer').css('width', $('.container').css('width'));
+ $('.timer').css('width', $('.result').css('width'));
  $('.timer').css('top', (parseInt($('.man').css('height'))*4/2-50)+'px');
  $('.timer').attr('data-to', value);
  $('.timer').attr('data-speed', timing);
