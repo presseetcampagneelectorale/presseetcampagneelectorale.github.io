@@ -299,7 +299,7 @@
           $(this).prop('Counter',0).animate({
               Counter: $(this).text()
           }, {
-              duration: 8000,
+              duration: 4000,
               easing: 'swing',
               step: function (now) {
                   $(this).text(Math.ceil(now));
@@ -311,21 +311,8 @@
 
  </script>
 
-<script async src="//jsfiddle.net/dhananjaymane11/tzu71jvq/embed/js,html,result/"></script>
- <script>
 
- $('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 8000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
-    });
-});
-</script>
+ 
 
 
 
