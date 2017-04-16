@@ -247,7 +247,7 @@
 </div>
  <!--Candidat1=LEPEN-->
   <div class="container-fluid">
-  <div class="result container" data-candidat1="LePen" data-candidat2="Poutou"> LePen VS Poutou
+  <div class="resultt container" data-candidat1="LePen" data-candidat2="Poutou"> LePen VS Poutou
 
   <div class="timer" id="controllable" data-from="0" data-to="100" data-refresh-interval="50" ></div>
 
@@ -309,11 +309,11 @@ $(document).ready(function(){
  var value = parseInt(counter);
 
  for(var i=0;i<total;i++){
-   var man = $(".result").append('<div class="man" id="'+i+'"></div>');
+   var man = $(".resultt").append('<div class="man" id="'+i+'"></div>');
    }
- $('.result').css('width', total/4 * (parseInt($('.man').css('width'))+parseInt($('.man').css('margin'))*2));
+ $('.resultt').css('width', total/4 * (parseInt($('.man').css('width'))+parseInt($('.man').css('margin'))*2));
 
- $('.timer').css('width', $('.result').css('width'));
+ $('.timer').css('width', $('.resultt').css('width'));
  $('.timer').css('top', (parseInt($('.man').css('height'))*4/2-50)+'px');
  $('.timer').attr('data-to', value);
  $('.timer').attr('data-speed', timing);
