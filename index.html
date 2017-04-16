@@ -11,6 +11,7 @@
   ga('send', 'pageview');
 
 </script>
+
   <title>Couverture médiatique de la campagne électorale présidentielle 2017</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,11 +35,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="https://code.highcharts.com/modules/data.js"></script>
   <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 
 
@@ -82,7 +82,7 @@
 <div class = "intro">
 <h2>Présentation des journaux passés en revue</h2>
   <p>Pour analyser le traitement médiatique de la campagne électorale depuis le début de l'année 2017,
-    Nous nous sommes focalisés sur 6 des journaux les plus importants en termes de volume de tirage annuel.
+    Nous nous sommes focalisés sur 6 des journaux les plus importants en termes de volume de tirage annuel. Vous ne les connaissez pas tous ? Passez votre souris pour un bref aperçu de ces médias !
   </p></div>
 
 <div class = "intro-img">
@@ -124,7 +124,7 @@
 <div id="gr1" class="container-fluid"  >
   <h2> Volume d'articles publiés sur les 5 favoris depuis janvier 2017 : Fillon largement en tête et Mélenchon à la traine</h2>
   <div id="container0" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
-  <div class = "text1">Haec et huius modi quaedam innumerabilia ultrix facinorum impiorum bonorumque praemiatrix aliquotiens operatur Adrastia atque utinam semper quam vocabulo duplici etiam Nemesim appellamus: ius quoddam sublime numinis efficacis, humanarum mentium opinione lunari circulo superpositum, vel ut definiunt alii, substantialis tutela generali potentia partilibus praesidens fatis, quam theologi veteres fingentes Iustitiae filiam ex abdita quadam aeternitate tradunt omnia despectare terrena.</div>
+  <div class = "text1">Intéressons-nous maintenant la couverture de la campagne journal par journal. Combien d’articles ont été écrits sur chacun des candidats « majeurs » à l’élection présidentielle depuis début 2017 ? Quelles sont les évolutions temporelles ? Les graphiques ci-dessous synthétisent toutes ces informations.</div>
 </div>
 <!--
 <div class="container-fluid">
@@ -153,57 +153,48 @@
 
 
 
+
 <div id="gr3" class="container-fluid">
   <h2>Graphe 3</h2>
-  <p>Intéressons-nous dans un premier temps à la couverture de la campagne par les différents médias. Combien d’articles ont été écrits sur chacun des candidats « majeurs » à l’élection présidentielle depuis début 2017 ? La réponse par le graphique ci-dessous.
+  <p>Intéressons-nous maintenant la couverture de la campagne journal par journal. Combien d’articles ont été écrits sur chacun des candidats « majeurs » à l’élection présidentielle depuis début 2017 ? Quelles sont les évolutions temporelles ? Les graphiques ci-dessous synthétisent toutes ces informations.
 </p>
 
-<div class="systeme_onglets">
-        <div class="onglets">
-            <span class="onglet_0 onglet" id="onglet_figaro" onclick="javascript:change_onglet('figaro');">Le Figaro</span>
-            <span class="onglet_0 onglet" id="onglet_monde" onclick="javascript:change_onglet('monde');">Le Monde</span>
-            <span class="onglet_0 onglet" id="onglet_liberation" onclick="javascript:change_onglet('liberation');">Libération</span>
-            <span class="onglet_0 onglet" id="onglet_express" onclick="javascript:change_onglet('express');">L'Express</span>
-            <span class="onglet_0 onglet" id="onglet_jdd" onclick="javascript:change_onglet('jdd');">Le JDD</span>
-            <span class="onglet_0 onglet" id="onglet_obs" onclick="javascript:change_onglet('obs');">L'Obs</span>
-        </div>
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="#1" data-toggle="tab">Figaro</a>
+          </li>
+          <li >
+            <a id="tab2" href="#2" data-toggle="tab">Monde</a>
+          </li>
+          <li >
+            <a id="tab3" href="#3" data-toggle="tab">Libération</a>
+          </li>
+        </ul>
 
-        <div class="contenu_onglets">
-            <div class="contenu_onglet" id="contenu_onglet_figaro">
-                <h1>Le figaro</h1></br>
-                  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+        <div class="tab-content">
+          <div class="tab-pane active" id="1">
+            <div class="col-md-6">
+              <div id="container" class = "chart" style="min-width: 310px; max-width: 800px; height: 300px; margin: 0 auto"></div>
                   <p>Le Figaro semble faire une couverture beaucoup plus équilibrée de la campagne présidentielle que Le Monde par exemple. Chacun des candidats possède ses périodes d’intense couverture, les courbes se croisant de manière systématique semaine après semaine. Par ailleurs, l’affaire Fillon n’est pas particulièrement suivie par ce journal. Au moment où Le Monde publie 70 articles sur le candidat Fillon, le quotidien de droite en publie seulement 10 (et largement moins que les autres candidats) … </p>
             </div>
-
-            <div class="contenu_onglet" id="contenu_onglet_monde">
-                <h1>Le Monde</h1></br>
-                <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
-                <p>Comme nous pouvons le voir, Le Monde traite les candidats en fonction de l’actualité médiatique. Le premier pic de Hamon (à la fin Janvier) correspond aux primaires PS (premier et deuxième Tour), les pics de Fillon sont associés respectivement au déclenchement des affaires (une semaine après le pic Hamon) et à l’abandon progressif du parti des Républicains (fin février). Notons une forte tendance macroniste sur la dernière semaine avec plus de 3 articles quotidiens sur le candidat. Les autres candidats (Le Pen et Mélenchon) sont faiblement traités sur la période considérée.
-</p>
-            </div>
-            <div class="contenu_onglet" id="contenu_onglet_liberation">
-                <h1>Libération</h1></br>
-                <div id="container_libe" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+          </div>
+          <div class="tab-pane" id="2">
+          <div class="col-md-6">
+            <div id="container2" class = "chart" style="min-width: 310px; max-width: 800px; height: 300px; margin: 0 auto"></div>
+                <p>Comme nous pouvons le voir, Le Monde traite les candidats en fonction de l’actualité médiatique. Le premier pic de Hamon (à la fin Janvier) correspond aux primaires PS (premier et deuxième Tour), les pics de Fillon sont associés respectivement au déclenchement des affaires (une semaine après le pic Hamon) et à l’abandon progressif du parti des Républicains (fin février). Notons une forte tendance macroniste sur la dernière semaine avec plus de 3 articles quotidiens sur le candidat. Les autres candidats (Le Pen et Mélenchon) sont faiblement traités sur la période considérée.</p>
+          </div>
+          </div>
+          <div class="tab-pane" id="3">
+          <div class="col-md-6">
+            <div id="container_libe"  style="min-width: 310px; max-width: 800px; height: 300px; margin: 0 auto"></div>
                 <p>Libération présente une couverture de campagne similaire à celle du Monde (avec les mêmes formes et les mêmes pics). Cependant, constatons que le premier pic de Fillon (affaires) est d’ampleur similaire à celui du pic Hamon. On constate également cette tendance macroniste commune à beaucoup de journaux sur le mois de mars, même si elle est d’ampleur beaucoup plus faible.</p>
-            </div>
-            <div class="contenu_onglet" id="contenu_onglet_express">
-              <h1>L'Express</h1></br>
-              <div id="container_expr" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
-              <p>L’Express effectue une couverture similaire à celle du Monde : On retrouve les mêmes pics aux mêmes endroits pour les gros candidats, même s’ils ont cependant des intensités bien différentes. Par exemple, l’affaire Fillon est beaucoup plus couverte qu’au Monde (plus de 12 articles par jour en pleine période !), et la tendance macroniste sur les dernières semaines du mois de mars est plus importante qu’au sein du quotidien du soir. La couverture de la campagne est donc celle d’un journal de tendance politique libérale.</p>
-            </div>
-            <div class="contenu_onglet" id="contenu_onglet_jdd">
-              <h1>Le Journal du Dimanche</h1></br>
-              <div id="container_jdd" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
-              <p>Le JDD effectue lui aussi une couverture de la campagne présidentielle analogue à celle du Monde (des pics autour des primaires, des affaires et des défections des candidats). Cependant, la couverture de Fillon s’effondre sur les dernières semaines au profit de Macron qui devient le candidat principalement traité par l’hebdomadaire au cours du mois de mars.</p>
-            </div>
-            <div class="contenu_onglet" id="contenu_onglet_obs">
-              <h1>L'Obs</h1></br>
-              <div id="container_obs" style = "min-width: 310px; height: 400px; margin: 0 auto"></div></br>
-              <p>L’Obs lui aussi couvre la campagne de manière analogue à celle des autres journaux. Cependant, on constate qu’il n’y a aucune dynamique Macron sur le mois de mars, c’est-à-dire que le seul candidat à bénéficier d’un traitement spécifique est le candidat des Républicains. Par ailleurs, le Pic Fillon des affaires est beaucoup plus important que celui associé aux primaires socialistes.</p>
-            </div>
+          </div>
+ </div>
+ </div>
 
-        </div>
-    </div>
+
+<!--Partie justice-->
+
 
 </div>
 
@@ -313,13 +304,9 @@
   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <!--<div id='highcharts-emibiba'><script src='//cloud.highcharts.com/inject/emibiba' defer='defer'></script></div>-->
+<div id="container_partis" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
 
 
-
-<div class="fleche"> <a href="#myPage" title="To Top">
-        <span class="glyphicon glyphicon-chevron-up"></span></a>
-</div>
 
 <div id="footer" class="footer container-fluid">
 <div class="container mini-section">
@@ -373,9 +360,6 @@
     </div><!--/col-sm-3-->
 
 
-  	</div><!--/row-->
-<!--/container-->
-</div><!--/footer--></div>
 
 
 
@@ -454,7 +438,7 @@
     },
     tooltip: {
         formatter: function () {
-        if(this.point.name == "Début de l'affaire Fillon")
+        if(this.point.label == "att")
           {return "<b>"+this.point.name +" : </b>" + "<br/>" + "Nombre d'articles sur " +this.series.name + " : " + this.y ;}
         else
             {return '<b> Semaine ' + this.x + " : "+'</b><br/>'+
@@ -477,13 +461,27 @@
             symbol: 'square'
         },
         data: [2,2,3,{
-            difftool:true,
+            label:"att",
             name : "Début de l'affaire Fillon",
             y: 6, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
             marker: {
                 symbol: 'url(img/explosion.png)',
                 label: "gsgse"}
-                },17,13,14,6,30,28,26,5],
+                },17,{
+            label:"att",
+            name : "Affaire Fillon enfants rémunérés, interview Pénélope",
+            y: 13, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },14,6,{
+            label:"att",
+            name : "Fillon mis en examen : désaffection des cadres",
+            y: 30, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },28,26,5],
         color:"#4169E1",
 
     },
@@ -493,7 +491,21 @@
         marker: {
             symbol: 'circle'
         },
-        data: [3,5,5,20,24,14,14,22,13,27,28,16],
+        data: [3,5,5,{
+            label:"att",
+            name : "Primaire socialiste : premier tour",
+            y: 20, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },{
+            label:"att",
+            name : "Primaire socialiste : deuxième tour",
+            y: 24, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },14,14,22,13,27,28,16],
         color : "#008000"
     },
 
@@ -503,7 +515,14 @@
         marker: {
             symbol: 'triangle'
         },
-        data: [4,0,9,4,14,16,12,31,26,24,12,18],
+        data: [4,0,9,4,14,16,12,31,{
+            label:"att",
+            name : "Attachés parlementaires FN",
+            y: 26, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },24,12,18],
         color : "#00008B"
     },
 
@@ -556,7 +575,7 @@
     },
     tooltip: {
         formatter: function () {
-        if(this.point.name == "Début de l'affaire Fillon")
+        if(this.point.label == "att")
           {return "<b>"+this.point.name +" : </b>" + "<br/>" + "Nombre d'articles sur " +this.series.name + " : " + this.y ;}
         else
             {return '<b> Semaine ' + this.x + " : "+'</b><br/>'+
@@ -579,13 +598,27 @@
             symbol: 'square'
         },
         data: [9,14,12,{
-            difftool:true,
+            label:'att',
             name : "Début de l'affaire Fillon",
             y: 33, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
             marker: {
                 symbol: 'url(img/explosion.png)',
                 label: "gsgse"}
-                },46,67,33,17,47,36,39,33],
+                },46,{
+            label:"att",
+            name : "Affaire Fillon : enfants rémunérés, interview Pénélope",
+            y: 67, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },33,17,{
+            label:"att",
+            name : "Fillon mis en examen : désaffection des cadres",
+            y: 47, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },36,39,33],
         color:"#4169E1",
 
     },
@@ -596,7 +629,21 @@
         marker: {
             symbol: 'circle'
         },
-        data: [5,8,10,39,32,15,14,18,12,21,20,13],
+        data: [5,8,10,{
+            label:"att",
+            name : "Primaire socialiste : premier tour",
+            y: 39, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },{
+            label:"att",
+            name : "Primaire socialiste : second tour.",
+            y: 32, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },15,14,18,12,21,20,13],
         color : "#008000"
     },
 
@@ -606,7 +653,14 @@
         marker: {
             symbol: 'triangle'
         },
-        data: [5,3,3,2,8,15,9,9,15,11,10,10],
+        data: [5,3,3,2,8,15,9,9,{
+            label:"att",
+            name : "Attachés parlementaires FN",
+            y: 15, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },11,10,10],
         color : "#00008B"
     },
 
@@ -1328,6 +1382,11 @@ var currentquestion = 0,
     init();
 });
 </script>
+<script>
+
+$('#onglet_express').on('click',function(){}
+document.getElementById('contenu_onglet_express').Highcharts.reflow()});
+</script>
 
 
 <!-- Script justice figaro -->
@@ -1355,7 +1414,7 @@ var currentquestion = 0,
     },
     tooltip: {
         formatter: function () {
-        if(this.point.name == "Début de l'affaire Fillon")
+        if(this.point.label == "att")
           {return "<b>"+this.point.name +" : </b>" + "<br/>" + "Nombre d'articles sur " +this.series.name + " : " + this.y ;}
         else
             {return '<b> Semaine ' + this.x + " : "+'</b><br/>'+
@@ -1379,13 +1438,27 @@ var currentquestion = 0,
         },
 
         data: [2,2,3,{
-            difftool:true,
+            label:"att",
             name : "Début de l'affaire Fillon",
             y: 3, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
             marker: {
                 symbol: 'url(img/explosion.png)',
                 label: "gsgse"}
-                },13,11,12,6,27,26,22,5],
+                },13,{
+            label : "att",
+            name : "Affaire Fillon, enfants rémunérés, interview Pénélope",
+            y: 11, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                }
+                },12,6,{
+            label : "att",
+            name : "Fillon mis en examen, désaffection des cadres",
+            y: 27, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                }
+                },26,22,5],
                 color : "#4169E1"
 
     },
@@ -1469,7 +1542,7 @@ var currentquestion = 0,
     },
     tooltip: {
         formatter: function () {
-        if(this.point.name == "Début de l'affaire Fillon")
+        if(this.point.label == "att")
           {return "<b>"+this.point.name +" : </b>" + "<br/>" + "Nombre d'articles sur " +this.series.name + " : " + this.y ;}
         else
             {return '<b> Semaine ' + this.x + " : "+'</b><br/>'+
@@ -1493,13 +1566,27 @@ var currentquestion = 0,
         },
 
         data: [9,14,11,{
-            difftool:true,
+            label : "att",
             name : "Début de l'affaire Fillon",
             y: 17, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
             marker: {
                 symbol: 'url(img/explosion.png)',
-                label: "gsgse"}
-                },18,43,24,10,36,27,25,25],
+                }
+                },18,{
+            label : "att",
+            name : "Affaire Fillon, enfants rémunérés, interview Pénélope",
+            y: 43, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                }
+                },24,10,{
+            label : "att",
+            name : "Fillon mis en examen, désaffection des cadres",
+            y: 36, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                }
+                },27,25,25],
                 color : "#4169E1"
 
     },
@@ -1555,6 +1642,144 @@ var currentquestion = 0,
     }
     ]
 });</script>
+
+<!-- Graphique partis -->
+
+<script>Highcharts.chart('container_partis', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: 'Traitement médiatique des partis politiques du Monde'
+    },
+    subtitle: {
+        text: "Proportion d'articles sortis par semaine"
+    },
+    xAxis: {
+        title:{
+          text: "Semaine de 2017"
+        },
+        categories: ['1', '2', '3', '4', '5', '6',
+            '7', '8', '9', '10', '11', '12']
+    },
+    yAxis: {
+        title: {
+            text: "Volume d'articles"
+        }
+    },
+    tooltip: {
+        formatter: function () {
+        if(this.point.label == "att")
+          {return "<b>"+this.point.name +" : </b>" + "<br/>" + "Nombre d'articles sur " +this.series.name + " : " + this.y ;}
+        else
+            {return '<b> Semaine ' + this.x + " : "+'</b><br/>'+
+                "Nombre d'articles sur "+this.series.name +" : " + this.y ;}
+        }
+    },
+
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 2,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+
+    series: [{
+        name: 'Les Républicains',
+        marker: {
+            symbol: 'square'
+        },
+
+        data: [0,2,0,{
+            label : "att",
+            name : "Début de l'affaire Fillon : premiers articles",
+            y: 11, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },2,{
+            label : "att",
+            name : "Affaire Fillon : enfants rémunérés, interview Pénélope",
+            y: 1, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },0,0,{
+            label : "att",
+            name : "Fillon mis en examen, désaffection des cadres",
+            y: 1, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },4,3,2],
+                color : "#4169E1"
+
+    },
+
+
+    {
+        name: 'Pari Socialiste',
+        marker: {
+            symbol: 'circle'
+        },
+        data: [5,3,3,{
+            label : "att",
+            name : "Primaire socialiste : premier tour",
+            y: 12, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },{
+            label : "att",
+            name : "Primaire socialiste : deuxième tour",
+            y: 5, //Pour l'endroit où mettre l'étoile. Le mettre là où on veut attention.
+            marker: {
+                symbol: 'url(img/explosion.png)',
+                label: "gsgse"}
+                },4,1,3,5,0,2,1],
+        color : "#008000"
+    },
+
+    {
+        visible : false,
+        name: 'Le Front National',
+        marker: {
+            symbol: 'triangle'
+        },
+        data: [8,1,1,6,4,4,8,10,4,6,9,5],
+        color : "#00008B"
+    },
+
+    {
+        visible : false,
+        name: 'En Marche',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [1,0,5,3,2,1,3,0,0,1,1,5],
+        color : "#FFA500",
+    },
+
+    {
+        visible : false,
+        name: 'La France insoumise',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [0,0,0,0,0,0,0,0,0,0,0,1],
+        color:"#FF0000"
+    }
+    ]
+});</script>
+
+<script>jQuery(document).on( 'shown.bs.tab', 'a[data-toggle="tab"]', function () { 
+    $( '.chart' ).each(function() { 
+        $(this).highcharts().reflow();
+    });
+})</script>
 
 
 </body>
