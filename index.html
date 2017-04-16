@@ -35,6 +35,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="https://code.highcharts.com/modules/data.js"></script>
   <script src="https://code.highcharts.com/modules/drilldown.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -158,51 +159,42 @@
   <p>Intéressons-nous maintenant la couverture de la campagne journal par journal. Combien d’articles ont été écrits sur chacun des candidats « majeurs » à l’élection présidentielle depuis début 2017 ? Quelles sont les évolutions temporelles ? Les graphiques ci-dessous synthétisent toutes ces informations.
 </p>
 
-<div class="systeme_onglets">
-        <div class="onglets">
-            <span class="onglet_0 onglet" id="onglet_figaro" onclick="javascript:change_onglet('figaro');">Le Figaro</span>
-            <span class="onglet_0 onglet" id="onglet_monde" onclick="javascript:change_onglet('monde');">Le Monde</span>
-            <span class="onglet_0 onglet" id="onglet_liberation" onclick="javascript:change_onglet('liberation');">Libération</span>
-            <span class="onglet_0 onglet" id="onglet_express" onclick="javascript:change_onglet('express');">L'Express</span>
-            <span class="onglet_0 onglet" id="onglet_jdd" onclick="javascript:change_onglet('jdd');">Le JDD</span>
-            <span class="onglet_0 onglet" id="onglet_obs" onclick="javascript:change_onglet('obs');">L'Obs</span>
-        </div>
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="#1" data-toggle="tab">Figaro</a>
+          </li>
+          <li >
+            <a id="tab2" href="#2" data-toggle="tab">Monde</a>
+          </li>
+          <li >
+            <a id="tab3" href="#3" data-toggle="tab">Libération</a>
+          </li>
+        </ul>
 
-        <div class="contenu_onglets">
-            <div class="contenu_onglet" id="contenu_onglet_figaro">
-                <h1>Le figaro</h1></br>
-                  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+        <div class="tab-content">
+          <div class="tab-pane active" id="1">
+            <div class="col-md-6">
+              <div id="container" class = "chart" style="min-width: 310px; max-width: 800px; height: 300px; margin: 0 auto"></div>
                   <p>Le Figaro semble faire une couverture beaucoup plus équilibrée de la campagne présidentielle que Le Monde par exemple. Chacun des candidats possède ses périodes d’intense couverture, les courbes se croisant de manière systématique semaine après semaine. Par ailleurs, l’affaire Fillon n’est pas particulièrement suivie par ce journal. Au moment où Le Monde publie 70 articles sur le candidat Fillon, le quotidien de droite en publie seulement 10 (et largement moins que les autres candidats) … </p>
             </div>
-
-            <div class="contenu_onglet" id="contenu_onglet_monde">
-                <h1>Le Monde</h1></br>
-                <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+          </div>
+          <div class="tab-pane" id="2">
+          <div class="col-md-6">
+            <div id="container2" class = "chart" style="min-width: 310px; max-width: 800px; height: 300px; margin: 0 auto"></div>
                 <p>Comme nous pouvons le voir, Le Monde traite les candidats en fonction de l’actualité médiatique. Le premier pic de Hamon (à la fin Janvier) correspond aux primaires PS (premier et deuxième Tour), les pics de Fillon sont associés respectivement au déclenchement des affaires (une semaine après le pic Hamon) et à l’abandon progressif du parti des Républicains (fin février). Notons une forte tendance macroniste sur la dernière semaine avec plus de 3 articles quotidiens sur le candidat. Les autres candidats (Le Pen et Mélenchon) sont faiblement traités sur la période considérée.</p>
-            </div>
-            <div class="contenu_onglet" id="contenu_onglet_liberation">
-                <h1>Libération</h1></br>
-                <div id="container_libe" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
+          </div>
+          </div>
+          <div class="tab-pane" id="3">
+          <div class="col-md-6">
+            <div id="container_libe"  style="min-width: 310px; max-width: 800px; height: 300px; margin: 0 auto"></div>
                 <p>Libération présente une couverture de campagne similaire à celle du Monde (avec les mêmes formes et les mêmes pics). Cependant, constatons que le premier pic de Fillon (affaires) est d’ampleur similaire à celui du pic Hamon. On constate également cette tendance macroniste commune à beaucoup de journaux sur le mois de mars, même si elle est d’ampleur beaucoup plus faible.</p>
-            </div>
-            <div class="contenu_onglet" id="contenu_onglet_express">
-              <h1>L'Express</h1></br>
-              <div id="container_expr" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
-              <p>L’Express effectue une couverture similaire à celle du Monde : On retrouve les mêmes pics aux mêmes endroits pour les gros candidats, même s’ils ont cependant des intensités bien différentes. Par exemple, l’affaire Fillon est beaucoup plus couverte qu’au Monde (plus de 12 articles par jour en pleine période !), et la tendance macroniste sur les dernières semaines du mois de mars est plus importante qu’au sein du quotidien du soir. La couverture de la campagne est donc celle d’un journal de tendance politique libérale.</p>
-            </div>
-            <div class="contenu_onglet" id="contenu_onglet_jdd">
-              <h1>Le Journal du Dimanche</h1></br>
-              <div id="container_jdd" style="min-width: 310px; height: 400px; margin: 0 auto"></div></br>
-              <p>Le JDD effectue lui aussi une couverture de la campagne présidentielle analogue à celle du Monde (des pics autour des primaires, des affaires et des défections des candidats). Cependant, la couverture de Fillon s’effondre sur les dernières semaines au profit de Macron qui devient le candidat principalement traité par l’hebdomadaire au cours du mois de mars.</p>
-            </div>
-            <div class="contenu_onglet" id="contenu_onglet_obs">
-              <h1>L'Obs</h1></br>
-              <div id="container_obs" style = "min-width: 310px; height: 400px; margin: 0 auto"></div></br>
-              <p>L’Obs lui aussi couvre la campagne de manière analogue à celle des autres journaux. Cependant, on constate qu’il n’y a aucune dynamique Macron sur le mois de mars, c’est-à-dire que le seul candidat à bénéficier d’un traitement spécifique est le candidat des Républicains. Par ailleurs, le Pic Fillon des affaires est beaucoup plus important que celui associé aux primaires socialistes.</p>
-            </div>
+          </div>
+ </div>
+ </div>
 
-        </div>
-    </div>
+
+<!--Partie justice-->
+
 
 </div>
 
@@ -1782,12 +1774,13 @@ document.getElementById('contenu_onglet_express').Highcharts.reflow()});
     }
     ]
 });</script>
-<script>jQuery(document).on( 'shown.bs.tab', 'a[data-toggle="tab"]', function (e) { // on tab selection event
-    jQuery( "#container, #container2, #container_libe, #container_expr, #container_jdd, #container_obs").each(function() {
-        var chart = jQuery(this).highcharts(); // target the chart itself
-        chart.reflow() // reflow that chart
+
+<script>jQuery(document).on( 'shown.bs.tab', 'a[data-toggle="tab"]', function () { 
+    $( '.chart' ).each(function() { 
+        $(this).highcharts().reflow();
     });
 })</script>
+
 
 </body>
 </html>
