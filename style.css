@@ -214,17 +214,6 @@ img.question-image {
 }
 @import "compass/css3";
 
-body{
-  background:#fff;
-  font-size:8px;
-  font-family:Century Gothic;
-}
-.container{
-  margin:0;
-  padding:0;
-  height:250px;
-  background:#fff;
-}
 .man{
   background:url('https://googledrive.com/host/0BxAy_xtcSev3U2NkRGRRTVQ5TnM/man.jpg');
   float:left;
