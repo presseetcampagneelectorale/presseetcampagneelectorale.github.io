@@ -250,7 +250,7 @@
   <div class="result" data-candidat1="LePen" data-candidat2="Poutou">
 
 
-     <h4>Lepen a </h4>Lepen a <span class="count"> 30</span> plus
+     <h2>Lepen a </h2> <span class="count"> 30</span> plus
 
    </div>
  <div class="result" data-candidat1="LePen" data-candidat2="Lasalle"> LePen VS Lasalle</div>
@@ -295,11 +295,11 @@
 
        // get all result divs, and filter for matching data attributes
        $('.result').filter('[data-candidat1="' + candidat1.val() + '"][data-candidat2="' + candidat2.val() + '"]').addClass('active');
-       $('.result.active').children().each(function () {
+       $('.result.active').children(".count").each(function () {
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
     }, {
-        duration: 2000,
+        duration: 4000,
         easing: 'swing',
         step: function (now) {
            $(this).text(Math.ceil(now));
