@@ -249,8 +249,12 @@
   <div class="container-fluid">
   <div class="result" data-candidat1="LePen" data-candidat2="Poutou">
 
-
+    <div class="row-fluid">
      <h2>Lepen a </h2> <span class="count"> 30</span> plus
+    </div>
+     <div class="row-fluid" id="Lepen_Poutou">
+
+     </div>
 
    </div>
  <div class="result" data-candidat1="LePen" data-candidat2="Lasalle"> LePen VS Lasalle</div>
@@ -299,7 +303,7 @@
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
     }, {
-        duration: 4000,
+        duration: 3000,
         easing: 'swing',
         step: function (now) {
            $(this).text(Math.ceil(now));
@@ -1800,6 +1804,86 @@ document.getElementById('contenu_onglet_express').Highcharts.reflow()});
         $(this).highcharts().reflow();
     });
 })</script>
+
+<script>
+
+
+var chart = Highcharts.chart('Lepen_Poutou', {
+
+    chart: {
+        type: 'column'
+    },
+
+    title: {
+        text: 'Nombre d\'articles depuis Janvier 2017'
+    },
+
+    subtitle: {
+        text: ''
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'middle',
+        layout: 'vertical'
+    },
+
+    xAxis: {
+        categories: [''],
+        labels: {
+            x: -10
+        }
+    },
+
+    yAxis: {
+        allowDecimals: false,
+        title: {
+            text: 'Nombre d\'articles'
+        }
+    },
+
+    series: [{
+        name: 'LePen',
+        data: [1],
+        color:'darkblue'
+    }, {
+        name: 'Poutou',
+        data: [11],
+        color:'grey'
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    layout: 'horizontal'
+                },
+                yAxis: {
+                    labels: {
+                        align: 'left',
+                        x: 0,
+                        y: -5
+                    },
+                    title: {
+                        text: null
+                    }
+                },
+                subtitle: {
+                    text: null
+                },
+                credits: {
+                    enabled: false
+                }
+            }
+        }]
+    }
+});
+</script>
 
 
 </body>
