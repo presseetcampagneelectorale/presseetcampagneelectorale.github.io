@@ -101,7 +101,18 @@ padding: 100px 25px;
   padding-left: 10px;
   padding-right: 10px;
 }
-
+/*Comparaison petis vs grands candidats mise en forme du texte*/
+#Lepen_Poutou, .text2{
+  float: left;
+  width: 50%;
+}
+.text2{
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color:#ff9900;
+  font-size:5em;
+}
 
 /*******************************************************/
 
@@ -219,7 +230,7 @@ img.question-image {
   z-index:100;
   width:600px;
   margin:0 auto;
-  text-align:center;
+  /*text-align:center;*/
   color:#ff9900;
   font-size:5em;
   position:absolute;
