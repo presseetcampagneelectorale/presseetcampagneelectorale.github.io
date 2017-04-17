@@ -274,10 +274,54 @@
      </div>
 
 
- <div class="result" data-candidat1="LePen" data-candidat2="Arthaud"> LePen VS Arthaud</div>
- <div class="result" data-candidat1="LePen" data-candidat2="Cheminade"> LePen VS Cheminade</div>
- <div class="result" data-candidat1="LePen" data-candidat2="Dupont-Aignan"> LePen VS Dupont-Aignan</div>
- <div class="result" data-candidat1="LePen" data-candidat2="Asselineau"> LePen VS Asselineau</div>
+ <div class="result container-fluid" data-candidat1="LePen" data-candidat2="Arthaud">
+   <div class="row-fluid">
+
+      <div class="col-sm-4" id="Lepen_Arthaud" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+      <div class="text2 col-sm-4">
+        <span class="count"> 19</span> fois plus d'articles pour Lepen!
+      </div>
+   </div>
+
+
+ </div>
+ <div class="result container-fluid" data-candidat1="LePen" data-candidat2="Cheminade"> LePen VS Cheminade
+   <div class="row-fluid">
+
+      <div class="col-sm-4" id="Lepen_Cheminade" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+      <div class="text2 col-sm-4">
+        <span class="count"> 33</span> fois plus d'articles pour Lepen!
+      </div>
+   </div>
+
+
+ </div>
+ <div class="result container-fluid" data-candidat1="LePen" data-candidat2="Dupont-Aignan">
+   <div class="row-fluid">
+
+      <div class="col-sm-4" id="Lepen_Dupont_Aignan" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+      <div class="text2 col-sm-4">
+        <span class="count"> 11</span> fois plus d'articles pour Lepen!
+      </div>
+   </div>
+ </div>
+ <div class="result container-fluid" data-candidat1="LePen" data-candidat2="Asselineau">
+   <div class="row-fluid">
+
+      <div class="col-sm-4" id="Lepen_Asselineau" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+      <div class="text2 col-sm-4">
+        <span class="count"> 14</span> fois plus d'articles pour Lepen!
+      </div>
+   </div>
+
+ </div>
+
+
+
  <!--Candidat1=Macron-->
   <div class="result" data-candidat1="Macron" data-candidat2="Poutou"> Macron VS Poutou</div>
  <div class="result" data-candidat1="Macron" data-candidat2="Lasalle"> Macron VS Lasalle</div>
@@ -1941,6 +1985,306 @@ Highcharts.chart('Lepen_Lasalle', {
    }, {
        name: 'Lassale',
        data: [7],
+       color:'grey'
+   }],
+
+   // responsive: {
+   //     rules: [{
+   //         condition: {
+   //             maxWidth: 500
+   //         },
+   //         chartOptions: {
+   //             legend: {
+   //                 align: 'left',
+   //                 verticalAlign: 'bottom',
+   //                 layout: 'horizontal'
+   //             },
+   //             yAxis: {
+   //                 labels: {
+   //                     align: 'left',
+   //                     x: 0,
+   //                     y: -5
+   //                 },
+   //                 title: {
+   //                     text: null
+   //                 }
+   //             },
+   //             subtitle: {
+   //                 text: null
+   //             },
+   //             credits: {
+   //                 enabled: false
+   //             }
+   //         }
+   //     }]
+   // }
+});
+Highcharts.chart('Lepen_Arthaud', {
+
+   chart: {
+       type: 'column'
+   },
+
+   title: {
+       text: 'Nombre d\'articles depuis Janvier 2017'
+   },
+
+   subtitle: {
+       text: null
+   },
+
+   legend: {
+       align: 'right',
+       verticalAlign: 'middle',
+       layout: 'vertical'
+   },
+
+   xAxis: {
+       categories: [''],
+       labels: {
+           x: -10
+       }
+   },
+
+   yAxis: {
+       allowDecimals: false,
+       title: {
+           text: 'Nombre d\'articles'
+       }
+   },
+
+   series: [{
+       name: 'LePen',
+       data: [133],
+       color:'darkblue'
+   }, {
+       name: 'Lassale',
+       data: [7],
+       color:'grey'
+   }],
+
+   // responsive: {
+   //     rules: [{
+   //         condition: {
+   //             maxWidth: 500
+   //         },
+   //         chartOptions: {
+   //             legend: {
+   //                 align: 'left',
+   //                 verticalAlign: 'bottom',
+   //                 layout: 'horizontal'
+   //             },
+   //             yAxis: {
+   //                 labels: {
+   //                     align: 'left',
+   //                     x: 0,
+   //                     y: -5
+   //                 },
+   //                 title: {
+   //                     text: null
+   //                 }
+   //             },
+   //             subtitle: {
+   //                 text: null
+   //             },
+   //             credits: {
+   //                 enabled: false
+   //             }
+   //         }
+   //     }]
+   // }
+});
+Highcharts.chart('Lepen_Cheminade', {
+
+   chart: {
+       type: 'column'
+   },
+
+   title: {
+       text: 'Nombre d\'articles depuis Janvier 2017'
+   },
+
+   subtitle: {
+       text: null
+   },
+
+   legend: {
+       align: 'right',
+       verticalAlign: 'middle',
+       layout: 'vertical'
+   },
+
+   xAxis: {
+       categories: [''],
+       labels: {
+           x: -10
+       }
+   },
+
+   yAxis: {
+       allowDecimals: false,
+       title: {
+           text: 'Nombre d\'articles'
+       }
+   },
+
+   series: [{
+       name: 'LePen',
+       data: [133],
+       color:'darkblue'
+   }, {
+       name: 'Lassale',
+       data: [4],
+       color:'grey'
+   }],
+
+   // responsive: {
+   //     rules: [{
+   //         condition: {
+   //             maxWidth: 500
+   //         },
+   //         chartOptions: {
+   //             legend: {
+   //                 align: 'left',
+   //                 verticalAlign: 'bottom',
+   //                 layout: 'horizontal'
+   //             },
+   //             yAxis: {
+   //                 labels: {
+   //                     align: 'left',
+   //                     x: 0,
+   //                     y: -5
+   //                 },
+   //                 title: {
+   //                     text: null
+   //                 }
+   //             },
+   //             subtitle: {
+   //                 text: null
+   //             },
+   //             credits: {
+   //                 enabled: false
+   //             }
+   //         }
+   //     }]
+   // }
+});
+Highcharts.chart('Lepen_Asselineau', {
+
+   chart: {
+       type: 'column'
+   },
+
+   title: {
+       text: 'Nombre d\'articles depuis Janvier 2017'
+   },
+
+   subtitle: {
+       text: null
+   },
+
+   legend: {
+       align: 'right',
+       verticalAlign: 'middle',
+       layout: 'vertical'
+   },
+
+   xAxis: {
+       categories: [''],
+       labels: {
+           x: -10
+       }
+   },
+
+   yAxis: {
+       allowDecimals: false,
+       title: {
+           text: 'Nombre d\'articles'
+       }
+   },
+
+   series: [{
+       name: 'LePen',
+       data: [133],
+       color:'darkblue'
+   }, {
+       name: 'Lassale',
+       data: [9],
+       color:'grey'
+   }],
+
+   // responsive: {
+   //     rules: [{
+   //         condition: {
+   //             maxWidth: 500
+   //         },
+   //         chartOptions: {
+   //             legend: {
+   //                 align: 'left',
+   //                 verticalAlign: 'bottom',
+   //                 layout: 'horizontal'
+   //             },
+   //             yAxis: {
+   //                 labels: {
+   //                     align: 'left',
+   //                     x: 0,
+   //                     y: -5
+   //                 },
+   //                 title: {
+   //                     text: null
+   //                 }
+   //             },
+   //             subtitle: {
+   //                 text: null
+   //             },
+   //             credits: {
+   //                 enabled: false
+   //             }
+   //         }
+   //     }]
+   // }
+});
+Highcharts.chart('Lepen_Dupont_Aignan', {
+
+   chart: {
+       type: 'column'
+   },
+
+   title: {
+       text: 'Nombre d\'articles depuis Janvier 2017'
+   },
+
+   subtitle: {
+       text: null
+   },
+
+   legend: {
+       align: 'right',
+       verticalAlign: 'middle',
+       layout: 'vertical'
+   },
+
+   xAxis: {
+       categories: [''],
+       labels: {
+           x: -10
+       }
+   },
+
+   yAxis: {
+       allowDecimals: false,
+       title: {
+           text: 'Nombre d\'articles'
+       }
+   },
+
+   series: [{
+       name: 'LePen',
+       data: [133],
+       color:'darkblue'
+   }, {
+       name: 'Lassale',
+       data: [9],
        color:'grey'
    }],
 
