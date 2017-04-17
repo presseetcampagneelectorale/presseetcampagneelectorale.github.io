@@ -142,10 +142,6 @@
 <div class="container-fluid">
   <div id="myquizz" class="row-fluid">
           <div class="span6" id="frame" > </div>
-          <div class="span6" id="repartition"> </div>
-
-
-
     </div>
   </div>
 </div>
@@ -247,6 +243,7 @@
 </div>
  <!--Candidat1=LEPEN-->
   <div class="container-fluid">
+
     <div class="result container-fluid" data-candidat1="LePen" data-candidat2="Poutou">
 
         <div class="row-fluid">
@@ -258,9 +255,6 @@
            </div>
         </div>
      </div>
-
-
-
 
     <div class="result container-fluid" data-candidat1="LePen" data-candidat2="Lasalle">
        <div class="row-fluid">
@@ -1416,7 +1410,7 @@ var currentquestion = 0,
         $('#question').empty();
         $('#choice-block').empty();
         $('#submitbutton').remove();
-        $('#question').text(" Vous avez " + score + " réponses correctes"+  " sur " + quiz.length + " questions.");
+        //$('#question').text(" Vous avez " + score + " réponses correctes"+  " sur " + quiz.length + " questions.");
         // $(document.createElement('h2')).css({
         //     'text-align': 'center',
         //     'font-size': '4em'
