@@ -254,13 +254,24 @@
      <div class="col-sm-4" id="Lepen_Poutou" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
 
        <div class="text2 col-sm-4">
-          <span class="count"> 30</span> fois plus d'articles pour Lepen!
+          <span class="count"> 12</span> fois plus d'articles pour Lepen!
        </div>
        </div>
      </div>
 
    </div>
- <div class="result" data-candidat1="LePen" data-candidat2="Lasalle"> LePen VS Lasalle</div>
+ <div class="result container-fluid" data-candidat1="LePen" data-candidat2="Lasalle">
+   <div class="col-sm-4" id="Lepen_Lasalle" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+     <div class="text2 col-sm-4">
+        <span class="count"> 19</span> fois plus d'articles pour Lepen!
+     </div>
+     </div>
+   </div>
+
+   </div>
+
+ </div>
  <div class="result" data-candidat1="LePen" data-candidat2="Arthaud"> LePen VS Arthaud</div>
  <div class="result" data-candidat1="LePen" data-candidat2="Cheminade"> LePen VS Cheminade</div>
  <div class="result" data-candidat1="LePen" data-candidat2="Dupont-Aignan"> LePen VS Dupont-Aignan</div>
@@ -1885,6 +1896,82 @@ document.getElementById('contenu_onglet_express').Highcharts.reflow()});
     //         }
     //     }]
     // }
+});
+
+Highcharts.chart('Lepen_Lasalle', {
+
+   chart: {
+       type: 'column'
+   },
+
+   title: {
+       text: 'Nombre d\'articles depuis Janvier 2017'
+   },
+
+   subtitle: {
+       text: null
+   },
+
+   legend: {
+       align: 'right',
+       verticalAlign: 'middle',
+       layout: 'vertical'
+   },
+
+   xAxis: {
+       categories: [''],
+       labels: {
+           x: -10
+       }
+   },
+
+   yAxis: {
+       allowDecimals: false,
+       title: {
+           text: 'Nombre d\'articles'
+       }
+   },
+
+   series: [{
+       name: 'LePen',
+       data: [133],
+       color:'darkblue'
+   }, {
+       name: 'Lassale',
+       data: [7],
+       color:'grey'
+   }],
+
+   // responsive: {
+   //     rules: [{
+   //         condition: {
+   //             maxWidth: 500
+   //         },
+   //         chartOptions: {
+   //             legend: {
+   //                 align: 'left',
+   //                 verticalAlign: 'bottom',
+   //                 layout: 'horizontal'
+   //             },
+   //             yAxis: {
+   //                 labels: {
+   //                     align: 'left',
+   //                     x: 0,
+   //                     y: -5
+   //                 },
+   //                 title: {
+   //                     text: null
+   //                 }
+   //             },
+   //             subtitle: {
+   //                 text: null
+   //             },
+   //             credits: {
+   //                 enabled: false
+   //             }
+   //         }
+   //     }]
+   // }
 });
 </script>
 
