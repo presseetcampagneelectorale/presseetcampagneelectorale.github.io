@@ -294,7 +294,7 @@
 
        // get all result divs, and filter for matching data attributes
        $('.result').filter('[data-candidat1="' + candidat1.val() + '"][data-candidat2="' + candidat2.val() + '"]').addClass('active');
-       $('.result').filter('[data-candidat1="' + candidat1.val() + '"][data-candidat2="' + candidat2.val() + '"]').find("span")each(function () {
+       $('.result.active').find("span").each(function () {
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
     }, {
