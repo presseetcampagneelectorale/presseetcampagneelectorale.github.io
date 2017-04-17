@@ -219,7 +219,7 @@
    <option value="select">Choississez un candidat </option>
    <option value="Fillon">Fillon</option>
    <option  value="Mélenchon">Mélenchon </option>
-   <option value="LePen">LePen</option>
+   <option value="Macron">LePen</option>
    <option value="Hamon">Hamon</option>
    <option value="Macron">Macron</option>
  </select>
@@ -314,13 +314,80 @@
 
  </div>
 
-
-
  <!--Candidat1=Macron-->
-  <div class="result" data-candidat1="Macron" data-candidat2="Poutou"> Macron VS Poutou</div>
- <div class="result" data-candidat1="Macron" data-candidat2="Lasalle"> Macron VS Lasalle</div>
- <div class="result" data-candidat1="Macron" data-candidat2="Arthaud"> Macron VS Arthaud</div>
- <div class="result" data-candidat1="Macron" data-candidat2="Cheminade"> Macron VS Cheminade</div>
+ <div class="container-fluid">
+
+   <div class="result container-fluid" data-candidat1="Macron" data-candidat2="Poutou">
+
+       <div class="row-fluid">
+
+          <div class="col-sm-4" id="Macron_Poutou" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+          <div class="text2 col-sm-4">
+             <span class="count"> 21</span> fois plus d'articles pour Macron!
+          </div>
+       </div>
+    </div>
+
+   <div class="result container-fluid" data-candidat1="Macron" data-candidat2="Lasalle">
+      <div class="row-fluid">
+
+         <div class="col-sm-4" id="Macron_Lasalle" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+         <div class="text2 col-sm-4">
+           <span class="count"> 33</span> fois plus d'articles pour Macron!
+         </div>
+      </div>
+    </div>
+
+
+<div class="result container-fluid" data-candidat1="Macron" data-candidat2="Arthaud">
+  <div class="row-fluid">
+
+     <div class="col-sm-4" id="Macron_Arthaud" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+     <div class="text2 col-sm-4">
+       <span class="count"> 33</span> fois plus d'articles pour Macron!
+     </div>
+  </div>
+
+
+</div>
+<div class="result container-fluid" data-candidat1="Macron" data-candidat2="Cheminade">
+  <div class="row-fluid">
+
+     <div class="col-sm-4" id="Macron_Cheminade" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+     <div class="text2 col-sm-4">
+       <span class="count"> 58</span> fois plus d'articles pour Macron!
+     </div>
+  </div>
+
+
+</div>
+<div class="result container-fluid" data-candidat1="Macron" data-candidat2="Dupont-Aignan">
+  <div class="row-fluid">
+
+     <div class="col-sm-4" id="Macron_Dupont_Aignan" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+     <div class="text2 col-sm-4">
+       <span class="count"> 19</span> fois plus d'articles pour Macron!
+     </div>
+  </div>
+</div>
+<div class="result container-fluid" data-candidat1="Macron" data-candidat2="Asselineau">
+  <div class="row-fluid">
+
+     <div class="col-sm-4" id="Macron_Asselineau" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+
+     <div class="text2 col-sm-4">
+       <span class="count"> 26</span> fois plus d'articles pour Macron!
+     </div>
+  </div>
+
+</div>
+
+
  <!--Candidat1=Hamon-->
   <div class="result" data-candidat1="Hamon" data-candidat2="Poutou"> Hamon VS Poutou</div>
  <div class="result" data-candidat1="Hamon" data-candidat2="Lasalle"> Hamon VS Lasalle</div>
@@ -1215,7 +1282,7 @@ Highcharts.chart('repartition', {
       y: 56.33,
       drilldown: 'Fillon'
     }, {
-      name: 'LePen',
+      name: 'Macron',
       y: 24.03,
       drilldown: 'LePen'
     }, {
@@ -1861,7 +1928,7 @@ document.getElementById('contenu_onglet_express').Highcharts.reflow()});
 
 <script>
 
-
+//PETITS VS GRAND LEPEN
  Highcharts.chart('Lepen_Poutou', {
 
     chart: {
@@ -2275,6 +2342,458 @@ Highcharts.chart('Lepen_Dupont_Aignan', {
    series: [{
        name: 'LePen',
        data: [133],
+       color:'darkblue'
+   }, {
+       name: 'Dupont-Aignan',
+       data: [12],
+       color:'grey'
+   }],
+
+   // responsive: {
+   //     rules: [{
+   //         condition: {
+   //             maxWidth: 500
+   //         },
+   //         chartOptions: {
+   //             legend: {
+   //                 align: 'left',
+   //                 verticalAlign: 'bottom',
+   //                 layout: 'horizontal'
+   //             },
+   //             yAxis: {
+   //                 labels: {
+   //                     align: 'left',
+   //                     x: 0,
+   //                     y: -5
+   //                 },
+   //                 title: {
+   //                     text: null
+   //                 }
+   //             },
+   //             subtitle: {
+   //                 text: null
+   //             },
+   //             credits: {
+   //                 enabled: false
+   //             }
+   //         }
+   //     }]
+   // }
+});
+//PETITS VS GRAND Macron
+ Highcharts.chart('Macron_Poutou', {
+
+    chart: {
+        type: 'column'
+    },
+
+    title: {
+        text: 'Nombre d\'articles depuis Janvier 2017'
+    },
+
+    subtitle: {
+        text: null
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'middle',
+        layout: 'vertical'
+    },
+
+    xAxis: {
+        categories: [''],
+        labels: {
+            x: -10
+        }
+    },
+
+    yAxis: {
+        allowDecimals: false,
+        title: {
+            text: 'Nombre d\'articles'
+        }
+    },
+
+    series: [{
+        name: 'Macron',
+        data: [232],
+        color:'darkblue'
+    }, {
+        name: 'Poutou',
+        data: [11],
+        color:'grey'
+    }],
+
+    // responsive: {
+    //     rules: [{
+    //         condition: {
+    //             maxWidth: 500
+    //         },
+    //         chartOptions: {
+    //             legend: {
+    //                 align: 'left',
+    //                 verticalAlign: 'bottom',
+    //                 layout: 'horizontal'
+    //             },
+    //             yAxis: {
+    //                 labels: {
+    //                     align: 'left',
+    //                     x: 0,
+    //                     y: -5
+    //                 },
+    //                 title: {
+    //                     text: null
+    //                 }
+    //             },
+    //             subtitle: {
+    //                 text: null
+    //             },
+    //             credits: {
+    //                 enabled: false
+    //             }
+    //         }
+    //     }]
+    // }
+});
+
+Highcharts.chart('Macron_Lasalle', {
+
+   chart: {
+       type: 'column'
+   },
+
+   title: {
+       text: 'Nombre d\'articles depuis Janvier 2017'
+   },
+
+   subtitle: {
+       text: null
+   },
+
+   legend: {
+       align: 'right',
+       verticalAlign: 'middle',
+       layout: 'vertical'
+   },
+
+   xAxis: {
+       categories: [''],
+       labels: {
+           x: -10
+       }
+   },
+
+   yAxis: {
+       allowDecimals: false,
+       title: {
+           text: 'Nombre d\'articles'
+       }
+   },
+
+   series: [{
+       name: 'Macron',
+       data: [232],
+       color:'darkblue'
+   }, {
+       name: 'Lassale',
+       data: [7],
+       color:'grey'
+   }],
+
+   // responsive: {
+   //     rules: [{
+   //         condition: {
+   //             maxWidth: 500
+   //         },
+   //         chartOptions: {
+   //             legend: {
+   //                 align: 'left',
+   //                 verticalAlign: 'bottom',
+   //                 layout: 'horizontal'
+   //             },
+   //             yAxis: {
+   //                 labels: {
+   //                     align: 'left',
+   //                     x: 0,
+   //                     y: -5
+   //                 },
+   //                 title: {
+   //                     text: null
+   //                 }
+   //             },
+   //             subtitle: {
+   //                 text: null
+   //             },
+   //             credits: {
+   //                 enabled: false
+   //             }
+   //         }
+   //     }]
+   // }
+});
+Highcharts.chart('Macron_Arthaud', {
+
+   chart: {
+       type: 'column'
+   },
+
+   title: {
+       text: 'Nombre d\'articles depuis Janvier 2017'
+   },
+
+   subtitle: {
+       text: null
+   },
+
+   legend: {
+       align: 'right',
+       verticalAlign: 'middle',
+       layout: 'vertical'
+   },
+
+   xAxis: {
+       categories: [''],
+       labels: {
+           x: -10
+       }
+   },
+
+   yAxis: {
+       allowDecimals: false,
+       title: {
+           text: 'Nombre d\'articles'
+       }
+   },
+
+   series: [{
+       name: 'Macron',
+       data: [232],
+       color:'darkblue'
+   }, {
+       name: 'Arthaud',
+       data: [7],
+       color:'grey'
+   }],
+
+   // responsive: {
+   //     rules: [{
+   //         condition: {
+   //             maxWidth: 500
+   //         },
+   //         chartOptions: {
+   //             legend: {
+   //                 align: 'left',
+   //                 verticalAlign: 'bottom',
+   //                 layout: 'horizontal'
+   //             },
+   //             yAxis: {
+   //                 labels: {
+   //                     align: 'left',
+   //                     x: 0,
+   //                     y: -5
+   //                 },
+   //                 title: {
+   //                     text: null
+   //                 }
+   //             },
+   //             subtitle: {
+   //                 text: null
+   //             },
+   //             credits: {
+   //                 enabled: false
+   //             }
+   //         }
+   //     }]
+   // }
+});
+Highcharts.chart('Macron_Cheminade', {
+
+   chart: {
+       type: 'column'
+   },
+
+   title: {
+       text: 'Nombre d\'articles depuis Janvier 2017'
+   },
+
+   subtitle: {
+       text: null
+   },
+
+   legend: {
+       align: 'right',
+       verticalAlign: 'middle',
+       layout: 'vertical'
+   },
+
+   xAxis: {
+       categories: [''],
+       labels: {
+           x: -10
+       }
+   },
+
+   yAxis: {
+       allowDecimals: false,
+       title: {
+           text: 'Nombre d\'articles'
+       }
+   },
+
+   series: [{
+       name: 'Macron',
+       data: [232],
+       color:'darkblue'
+   }, {
+       name: 'Cheminade',
+       data: [4],
+       color:'grey'
+   }],
+
+   // responsive: {
+   //     rules: [{
+   //         condition: {
+   //             maxWidth: 500
+   //         },
+   //         chartOptions: {
+   //             legend: {
+   //                 align: 'left',
+   //                 verticalAlign: 'bottom',
+   //                 layout: 'horizontal'
+   //             },
+   //             yAxis: {
+   //                 labels: {
+   //                     align: 'left',
+   //                     x: 0,
+   //                     y: -5
+   //                 },
+   //                 title: {
+   //                     text: null
+   //                 }
+   //             },
+   //             subtitle: {
+   //                 text: null
+   //             },
+   //             credits: {
+   //                 enabled: false
+   //             }
+   //         }
+   //     }]
+   // }
+});
+Highcharts.chart('Macron_Asselineau', {
+
+   chart: {
+       type: 'column'
+   },
+
+   title: {
+       text: 'Nombre d\'articles depuis Janvier 2017'
+   },
+
+   subtitle: {
+       text: null
+   },
+
+   legend: {
+       align: 'right',
+       verticalAlign: 'middle',
+       layout: 'vertical'
+   },
+
+   xAxis: {
+       categories: [''],
+       labels: {
+           x: -10
+       }
+   },
+
+   yAxis: {
+       allowDecimals: false,
+       title: {
+           text: 'Nombre d\'articles'
+       }
+   },
+
+   series: [{
+       name: 'Macron',
+       data: [232],
+       color:'darkblue'
+   }, {
+       name: 'Asselineau',
+       data: [9],
+       color:'grey'
+   }],
+
+   // responsive: {
+   //     rules: [{
+   //         condition: {
+   //             maxWidth: 500
+   //         },
+   //         chartOptions: {
+   //             legend: {
+   //                 align: 'left',
+   //                 verticalAlign: 'bottom',
+   //                 layout: 'horizontal'
+   //             },
+   //             yAxis: {
+   //                 labels: {
+   //                     align: 'left',
+   //                     x: 0,
+   //                     y: -5
+   //                 },
+   //                 title: {
+   //                     text: null
+   //                 }
+   //             },
+   //             subtitle: {
+   //                 text: null
+   //             },
+   //             credits: {
+   //                 enabled: false
+   //             }
+   //         }
+   //     }]
+   // }
+});
+Highcharts.chart('Macron_Dupont_Aignan', {
+
+   chart: {
+       type: 'column'
+   },
+
+   title: {
+       text: 'Nombre d\'articles depuis Janvier 2017'
+   },
+
+   subtitle: {
+       text: null
+   },
+
+   legend: {
+       align: 'right',
+       verticalAlign: 'middle',
+       layout: 'vertical'
+   },
+
+   xAxis: {
+       categories: [''],
+       labels: {
+           x: -10
+       }
+   },
+
+   yAxis: {
+       allowDecimals: false,
+       title: {
+           text: 'Nombre d\'articles'
+       }
+   },
+
+   series: [{
+       name: 'Macron',
+       data: [232],
        color:'darkblue'
    }, {
        name: 'Dupont-Aignan',
