@@ -104,7 +104,7 @@ padding: 100px 25px;
 /*Comparaison petis vs grands candidats mise en forme du texte*/
 #Lepen_Poutou, .text2{
   float: left;
-  width: 50%;
+  width: 40%;
 }
 .text2{
   padding-top: 100px;
@@ -112,7 +112,6 @@ padding: 100px 25px;
   padding-right: 10px;
   color:#ff9900;
   font-size:20px;
-  border:1px solid;
 }
 
 /*******************************************************/
