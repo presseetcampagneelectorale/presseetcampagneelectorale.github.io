@@ -210,7 +210,7 @@ Poutou, Cheminade, Asselineau, Dupont-Aignant, Arthaud, Lassalle
 -->
 <div id="gr5" class="container-fluid">
   <h2>Couverture des grands partis</h2>
-  
+
   <p>Le FN est donc le parti le plus cité dans les médias (on notera d’ailleurs que le parti est presque autant cité que sa candidate,
     contrairement aux autres formations politiques), ce qui signifie que le traitement du FN est très spécifique : on présidentialise moins la candidate, et on écrira autant sur le parti et ses cadres. Cela signifie que la « sous médiatisation »
     de la candidate du Front National est à relativiser avec la médiatisation importante de son parti..</p>
@@ -1602,7 +1602,7 @@ Highcharts.chart('repartition', {
 </script>
 
 <script>
-var quiztitle = "Quizz: Les journaux ont t-ils un candidat préféré?";
+var quiztitle = "Quizz: Avez-vous suivi de près le traitement médiatique de campagne électorale?";
 
 
 var quiz = [
@@ -1620,6 +1620,20 @@ var quiz = [
            "correct" : "Fillon",
            "explanation" : "Fillon réprésente en effet à lui seul 38% des articles du Monde depuis le début de l'année",
        },
+       {
+           "question" : "Compléter les titres avec le nom du candidat (Attention! : certains articles ne sont pas forcément de 2017…):EDITO... ? est devenu le candidat de la rupture… avec son propre camp",
+           "image" : "http://www.katibin.fr/wp-content/uploads/2012/09/attention_manipulation15.jpg",
+           "choices" : [
+                                   "Fillon",
+
+                                   "Hamon",
+
+                                   "Le Pen",
+
+                               ],
+           "correct" : "Fillon",
+           "explanation" : "Un <a href=http://www.lejdd.fr/Politique/EDITO-Fillon-est-devenu-le-candidat-de-la-rupture-avec-son-propre-camp-851909>article du JDD </a> daté du 04/03/2017",
+       }
        {
            "question" : "Q2: Lequel des 5 favoris a été le plus couvert par Le Figaro",
            "image" : "img/figaro.png",
@@ -1681,7 +1695,7 @@ var currentquestion = 0,
         //alert("nQ");
         $('#explanation').empty();
         $('#question').text(quiz[currentquestion]['question']);
-        $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+        $('#pager').text('Question ' + Number(currentquestion + 1) + ' sur ' + quiz.length);
         if (quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != "") {
             if ($('#question-image').length == 0) {
                 $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
@@ -1772,11 +1786,11 @@ var currentquestion = 0,
         $('#question').empty();
         $('#choice-block').empty();
         $('#submitbutton').remove();
-        //$('#question').text(" Vous avez " + score + " réponses correctes"+  " sur " + quiz.length + " questions.");
-        // $(document.createElement('h2')).css({
-        //     'text-align': 'center',
-        //     'font-size': '2em'
-        // }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
+        $('#question').text(" Vous avez " + score + " réponses correctes"+  " sur " + quiz.length + " questions.");
+        $(document.createElement('h2')).css({
+            'text-align': 'center',
+             'font-size': '2em'
+         }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
     }
 
 
