@@ -1,24 +1,40 @@
 h1, h2, h3, h4{
   font-family: Capitals;
 }
+h1{
+  font-size: 30px;
+}
 
 body{
 font-family: palatino;
+font-size: 17px;
+margin: 20px;
 }
+
+
 
 .intro{
     margin:50px;
     text-align: center;
+
 }
 
 .intro-img{
 display: block;
-padding-left: 100px;
+padding-left: 3px;
+padding-top: 10px;
+}
+
+.intro-img .image0{
+  width:100px;
+  height:100px;
+  margin-left: 20px;
+  margin-bottom: 30px;
 }
 
 .intro-img .image{
   width:150px;
-  height:150px;
+  height:100px;
   margin-left: 20px;
   margin-bottom: 30px;
 }
@@ -31,6 +47,7 @@ padding-left: 100px;
   margin-left: 10px;
   height: 80px;
   z-index: 999999;
+  padding-bottom: 150px;
 }
 
 .hover-text {
@@ -61,6 +78,7 @@ padding-left: 100px;
 .img-nav{
 background-image: url("img/presse.jpg");
 padding: 100px 25px;
+margin-bottom: 50px;
 }
 
 
@@ -103,11 +121,17 @@ padding: 100px 25px;
   float: left;
   width: 50%;
 }
+
 .text1{
-  padding-top: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
+
+.mel{
+  position: relative;
+  left:15%;
+}
+
 /*Comparaison petis vs grands candidats mise en forme du texte*/
 #Lepen_Poutou, .text2{
   float: left;
@@ -138,7 +162,6 @@ padding: 100px 25px;
 #container3, #container4{
   float: left;
   width: 50%;
-  padding-bottom: 30px;
 }
 
 /**********************************************/
@@ -255,10 +278,15 @@ img.question-image {
 	background-color:#44646f;
   text-transform: uppercase;
 }
+
+#gr2{
+  padding-left: 25%;
+}
+
+
 footer
 {
     background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
-    padding-top: 25px;
 }
 
 footer p, footer ul
@@ -271,12 +299,8 @@ footer h1
     font-size: 1.1em;
 }
 
-p.int {
-  border:2px solid black;
-  border-radius: 10px;
-  width: 800px;
-  height:100px;
+#footer{
   padding-top: 20px;
-margin: 0 auto;
-text-align: justify;
 }
+
+
