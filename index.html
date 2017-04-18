@@ -650,8 +650,9 @@
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-  </div>
 <div id="container_partis" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="container_partis_total" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  </div>
 
 
 
@@ -758,6 +759,53 @@
     series: [{
         name: "Couverture médiatique depuis début 2017",
         data: [2622,1730,1510,1150,674]
+    }]
+});</script>
+
+<!--Graphe partis total-->
+
+<script>Highcharts.chart('container_partis_total', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: "Nombre d'articles du Monde sur les 5 partis principaux"
+    },
+
+    xAxis: {
+        categories: ['Front National', "Parti Socialiste",'En Marche', 'Les Républicains', 'La France Insoumise'],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: "Nombre d'articles publiés",
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' articles'
+    },
+    plotOptions: {
+        series: {
+                        colorByPoint: true
+                    }
+
+    },
+
+    colors: ['#4572A7', '#AA4643', '#89A54E', '#80699B', '#3D96AE'],
+
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: "Couverture médiatique depuis début 2017",
+        data: [88,57,27,17,1]
     }]
 });</script>
 
@@ -2088,21 +2136,21 @@ document.getElementById('contenu_onglet_express').Highcharts.reflow()});
                 symbol: 'url(img/explosion.png)',
                 label: "gsgse"}
                 },4,1,3,5,0,2,1],
-        color : "#008000"
+        color : "#008000",
+        visible:false
     },
 
     {
-        visible : false,
         name: 'Le Front National',
         marker: {
             symbol: 'triangle'
         },
         data: [8,1,1,6,4,4,8,10,4,6,9,5],
-        color : "#00008B"
+        color : "#00008B",
+        visible:true
     },
 
     {
-        visible : false,
         name: 'En Marche',
         marker: {
             symbol: 'diamond'
