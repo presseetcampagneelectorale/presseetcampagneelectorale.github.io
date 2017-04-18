@@ -122,10 +122,10 @@ bienveillance — ou de la complaisance — des médias ?
 
         <ul class="nav nav-tabs">
           <li class="active">
-            <a href="#1" data-toggle="tab">Figaro</a>
+            <a href="#1" data-toggle="tab">Le Figaro</a>
           </li>
           <li >
-            <a id="tab2" href="#2" data-toggle="tab">Monde</a>
+            <a id="tab2" href="#2" data-toggle="tab">Le Monde</a>
           </li>
           <li >
             <a id="tab3" href="#3" data-toggle="tab">Libération</a>
@@ -134,7 +134,7 @@ bienveillance — ou de la complaisance — des médias ?
             <a id="tab4" href="#4" data-toggle="tab">L'Express</a>
           </li>
           <li >
-            <a id="tab5" href="#5" data-toggle="tab">Le journal du Dimanche</a>
+            <a id="tab5" href="#5" data-toggle="tab">Le Journal du Dimanche</a>
           </li>
           <li >
             <a id="tab6" href="#6" data-toggle="tab">L'Obs</a>
@@ -1817,7 +1817,7 @@ var currentquestion = 0,
 });
 </script>
 <script>
-jQuery(document).on( 'shown.bs.tab', 'a[data-toggle="tab"]', function (e) { // on tab selection event
+jQuery(document).on( 'shown.bs.', 'a[data-toggle="tab"]', function (e) { // on tab selection event
     jQuery( "#container, #container2, #container_libe").each(function() {
         var chart = jQuery(this).highcharts(); // target the chart itself
         chart.reflow() // reflow that chart
