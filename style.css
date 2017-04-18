@@ -155,7 +155,17 @@ margin-bottom: 50px;
   width: 100%;
 }
 
+#gr3, a{
+  border-radius: 2px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border-radius: 5px;
+    color : black;
+}
 
+.nav-tabs a{
+  color : #191970;
+}
 /***********************************************/
 
 /*Graphique 4 justice*/
