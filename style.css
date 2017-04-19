@@ -62,9 +62,48 @@ padding-top: 10px;
   line-height: 28px;}
 
 
+/*****************************************/
+/*Images bandeau*/
 
+.img-nav{
+display: block;
+padding-top: 10px;
+background-color: #130E0A;
+}
 
+.img-nav .i{
+  width:100px;
+  height:100px;
+  margin-left: 9px;
+}
 
+.img-nav2{
+display: block;
+background-color: #130E0A;
+margin-top: -50px;
+padding-top: 20px;
+padding-left:20%;
+}
+
+.img-nav2 .i2{
+  width:100px;
+  height:100px;
+  margin-bottom: 30px;
+  margin-left: 9px;
+}
+
+/******************************************/
+
+.intro{
+  background-color:  transparent; 
+  border:5px solid LightBlue;
+  border-radius: 25px;
+  margin-bottom: 10px; 
+  padding: 8px 8px 8px 8px ; 
+  width : 700px; 
+  margin-top:20px;
+  margin-left:23%;
+}
 
 
 .jumbotron {
@@ -83,7 +122,6 @@ padding-top: 10px;
 .img-nav{
 width:100%;
 margin-bottom: 50px;
-display:inline-block;
 }
 
 
