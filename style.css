@@ -80,7 +80,11 @@ padding-top: 10px;
 
 }
 
-
+.img-nav{
+width:100%;
+margin-bottom: 50px;
+display:inline-block;
+}
 
 
 .bg-grey {
