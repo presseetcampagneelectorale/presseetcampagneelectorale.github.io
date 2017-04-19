@@ -91,7 +91,7 @@
   <img src="img/asselinau.png" class='i'>
 </div>
 
-<div class = "img-nav2">  
+<div class = "img-nav2">
   <img id="monde" src="img/monde.png" class='i2'>
   <img id = "figaro" src="img/figaro.png" class='i2'>
   <img src="img/liberation.png" class='i3'>
@@ -1645,7 +1645,7 @@ var quiztitle = "Quizz: Avez-vous suivi de près le traitement médiatique de ca
 var quiz = [
        {
            "question" : "Q1: Selon vous, Lequel des 5 favoris a été le plus couvert par Le Monde?",
-           "image" : "img/monde.jpeg",
+           "image" : "",
            "choices" : [
                                    "Fillon",
                                    "Macron",
@@ -1673,7 +1673,7 @@ var quiz = [
        },
        {
            "question" : "Q2: Lequel des 5 favoris a été le plus couvert par Le Figaro",
-           "image" : "img/figaro.png",
+           "image" : "",
            "choices" : [
                           "Fillon",
                           "Macron",
@@ -1687,7 +1687,7 @@ var quiz = [
        },
        {
            "question" : "Quel journal fait une couverture de la campagne atypique (très différente) des autres",
-           "image" : "http://www.katibin.fr/wp-content/uploads/2012/09/attention_manipulation15.jpg",
+           "image" : "",
            "choices" : [
                                    "Libération",
                                    "L'Express",
@@ -1783,7 +1783,7 @@ var currentquestion = 0,
             $('.choice').removeAttr('style').off('mouseout mouseover');
             $(this).css({
                 'border-color': '#222',
-                'font-weight': 700,
+                'font-weight': 100,
                 'background-color': '#c1c1c1'
             });
             if (quiz[currentquestion]['choices'][choice] == quiz[currentquestion]['correct']) {
@@ -1791,13 +1791,18 @@ var currentquestion = 0,
                 'background-color': '#50D943'
             });
             $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
-
+            $('#explanation').find("strong").css({
+               'color': 'green'
+              });
             score++;
         } else {
             $('.choice').eq(choice).css({
                 'background-color': '#D92623'
             });
-            $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            $('#explanation').html('<strong>Incorrect!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            $('#explanation').find("strong").css({
+               'color': 'red'
+              });
         }
                $("#submitbutton").show();
             if (submt) {
@@ -1859,9 +1864,9 @@ var currentquestion = 0,
 
             //add submit button
             $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Question suivante').css({
-                'font-weight': 700,
+                'font-weight': 200,
                 'color': '#222',
-                'padding': '30px 0',
+                'padding': '4px 0',
              }).appendTo('#frame');
            $(document.createElement('p')).addClass('explanation').attr('id', 'explanation').html('&nbsp;').appendTo('#frame');
 
