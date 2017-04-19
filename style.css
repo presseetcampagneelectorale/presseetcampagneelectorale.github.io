@@ -1,14 +1,19 @@
+title{
+  font-size: 30px;
+}
+
 h1, h2, h3, h4{
   font-family: Capitals;
 }
-h1{
-  font-size: 30px;
+
+h2{
+  font-size: 40px;
 }
 
 body{
 font-family: palatino;
 font-size: 17px;
-margin: 20px;
+background-color: #F5F5DC;
 }
 
 
@@ -16,7 +21,6 @@ margin: 20px;
 .intro{
     margin:50px;
     text-align: center;
-
 }
 
 .intro-img{
@@ -66,7 +70,8 @@ padding-top: 10px;
 .jumbotron {
     padding: 60px 25px;
 
-    background-color: #283e4a ;
+    background-color: #2C030B
+ ;
     margin:0px;
     color : #fafafa;
 
@@ -83,16 +88,21 @@ margin-bottom: 50px;
 
 
 .bg-grey {
-    background-color: #f6f6f6;
+    background-color: #F5F5DC;
     }
 
     .container-fluid {
     padding: 60px 50px;
 }
 
+.highcharts-background{
+      fill:#F5F5DC;
+    }
+
 .navbar {
     margin-bottom: 0;
-    background-color: #283e4a;
+    background-color: #2C030B
+;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -132,6 +142,8 @@ margin-bottom: 50px;
   left:15%;
 }
 
+
+
 /*Comparaison petis vs grands candidats mise en forme du texte*/
 #Lepen_Poutou, .text2{
   float: left;
@@ -164,8 +176,14 @@ margin-bottom: 50px;
 }
 
 .nav-tabs a{
-  color : #191970;
+  color : black;
 }
+
+#gr3{
+  background-color: #F5F5DC;
+}
+
+
 /***********************************************/
 
 /*Graphique 4 justice*/
