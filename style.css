@@ -4,6 +4,7 @@ title{
 
 h1, h2, h3, h4{
   font-family: Capitals;
+  text-align: center;
 }
 
 h2{
@@ -254,6 +255,31 @@ margin-bottom: 50px;
 }
 
 /***********************************************/
+
+/*Petits Candidats*/
+
+.form-control{
+  margin:0 auto;
+}
+
+.col-sm-4{
+  margin-left:7%;
+}
+
+.col-sm-3 text1{
+  margin-left:7%;
+  width: 310px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 1px solid LightBlue;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+
+
+
 
 #footer {
   padding: 10px;
